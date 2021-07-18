@@ -1,0 +1,374 @@
+<input type='hidden' class='character_class' name='attr_class'>
+<div class='page1'>
+	<div class='header'>
+		<div class='classname'>
+			<span class='adventurer'>The Adventurer</span>
+		</div>
+		<div class='classdesc'>
+			<span class='adventurer'>You are a peaceful, diplomatic vagabond, making allies from those you aid, perhaps toppling greater powers by forging strong bonds with others from yourself.</span>
+		</div>
+	</div>
+	<div class='3colrow'>
+		<div class='col'>
+			<label>Name</label>
+			<input name='attr_character_name' type='text'>
+			<label>Species</label>
+			<input name='attr_character_name' type='text'>
+			<label>Details</label>
+			<ul>
+				<li></li>
+				<li></li>
+				<li></li>
+			</ul>
+			<label>Demeanor</label>
+			<ul>
+				<li></li>
+			</ul>
+			<div class='backgroundbox'>
+				<label>Background</label>
+				<span class='bold' data-i18n="test">Where do you call home?</span>
+				<input type='radio' name='attr_home' value="0"><span class='adventurer' name='prebox_home'></span><input type='text' name='attr_homeword'><span name='postbox_home'></span>
+				<input type='radio' name='attr_home' value="1"><span class='adventurer' name='home2'></span>
+				<input type='radio' name='attr_home' value="2"><span class='adventurer' name='home3'></span>
+				<span class='bold'>Why are you a vagabond?</span>
+				<input type='radio' name='attr_raison' value="0">
+				<span class='adventurer' name='reason1'></span>
+				<input type='radio' name='attr_raison' value="1"><span class='adventurer' name='reason2'></span>
+				<input type='radio' name='attr_raison' value="2"><span class='adventurer' name='reason3'></span>
+				<input type='radio' name='attr_raison' value="3"><span class='adventurer' name='reason4'></span>
+				<input type='radio' name='attr_raison' value="4"><span class='adventurer' name='reason5'></span>			
+				<span class='bold'>Whom have you left behind?</span>
+				<input type='radio' name='attr_left' value="0"><span class='adventurer' name='left1'></span>
+				<input type='radio' name='attr_left' value="1"><span class='adventurer' name='left2'></span>
+				<input type='radio' name='attr_left' value="2"><span class='adventurer' name='left3'></span>
+				<input type='radio' name='attr_left' value="3"><span class='adventurer' name='left4'></span>
+				<input type='radio' name='attr_left' value="4"><span class='adventurer' name='left5'></span>		
+				<span class='bold'>Which faction have you served the most?</span>
+				<span name='mark2pres'></span>
+				<span class='bold'>With which faction have you earned a special enmity?</span>
+				<span name='mark1not'></span>
+			</div>
+		</div>
+		<div class='col'>
+			<div class='specbox'>
+				Your Drives
+			</div>
+			<div class='yellowcap'>Choose Two Drives</div>
+			<input class='checkbox' name="attr_drive1"><label class="adventurer drivelabel">Ambition</label>	
+			<span class='adventurer drivetext' name='drive1text'></span>
+			<input class='checkbox' name="attr_drive2"><label class="adventurer drivelabel">Clean Paws</label>
+			<span class='adventurer drivetext' name='drive2text'></span>
+			<input class='checkbox' name="attr_drive3"><label class="adventurer drivelabel">Principles</label>
+			<span class='adventurer drivetext' name='drive3text'></span>
+			<input class='checkbox' name="attr_drive4"><label class="adventurer drivelabel">Justice</label>
+			<span class='adventurer drivetext' name='drive4text'></span>
+		</div>
+		<div class='col'>
+			<div class="naturetext">Choose Your Nature</div>
+			<div class='patternbox'>
+				<input type='checkbox' class='bigcheck' name="attr_nature1"><span class="adventurer">Extrovert</span>
+			</div>
+			<div class="naturedesc">
+				<span class='adventurer'>Clear your exhaustion track when you share a moment of real warmth, friendship, or enjoyment with someone.</span>
+			</div>
+			<div class='patternbox'>
+				<input type='checkbox' class='bigcheck' name="attr_nature2"><span class="adventurer">Peacemaker</span>
+			</div>
+			<div class="naturedesc">
+				<span class='adventurer'>Clear your exhaustion track when you resolve a dangerous conflict nonviolently.</span>
+			</div>	
+			
+			<div class="connections">Your Connections</div>
+			<div class="connectiontitle"><span class="adventurer">Partner</span></div>
+			<div class="adventurer">
+				<input name="attr_connection1"><span> and I fought alongside each other to defend a clearing from a faction's advances... but we failed. Why did we defend the clearing? Why did we fail? Who defeated us?</span>
+				
+			</div>
+			<div class="dotteddesc">
+				When you fill in this connection, you each mark 2-prestige with the faction you helped, and mark 2-notoriety with the faction you harmed. During play, if you are spotted together, then any prestige or notoriety gains with those factions are doubled for the two of you.
+			</div>
+			<div class="connectiontitle"><span class="adventurer">Friend</span></div>
+			<div class="adventurer">
+				<span>I traveled with</span> <input name="attr_connection2"><span> for the time right after I became a vagabond. They helped keep me safe and showed me the Woodland. What keepsake did I gift them?</span>
+				
+			</div>
+			<div class="dotteddesc">
+				When you <strong>help</strong> them, you can mark 2-exhaustion to give a +2, instead of 1-exhaustion for a +1.
+			</div>
+			
+		</div>
+	</div>
+	<div>
+		<div class='reputation'>YOUR REPUTATION</div>
+		<div>
+			<fieldset name='repeating_reputation'>
+				<table>
+					<tr>
+						<td>
+							<input name='attr_rep-name'>
+						</td>
+						<td class='red'>
+							-3
+							<input type='checkbox' name='attr_rep-n31'>
+							<input type='checkbox' name='attr_rep-n32'>
+							<input type='checkbox' name='attr_rep-n33'>
+						</td>
+						<td class='red'>
+							-2
+							<input type='checkbox' name='attr_rep-n21'>
+							<input type='checkbox' name='attr_rep-n22'>
+							<input type='checkbox' name='attr_rep-n23'>
+						</td>			
+						<td class='red'>
+							-1
+							<input type='checkbox' name='attr_rep-n11'>
+							<input type='checkbox' name='attr_rep-n12'>
+							<input type='checkbox' name='attr_rep-n13'>
+						</td>			
+						<td>
+							0
+						</td>
+						<td class='green'>
+							<input type='checkbox' name='attr_rep-p11'>
+							<input type='checkbox' name='attr_rep-p12'>
+							<input type='checkbox' name='attr_rep-p13'>
+							<input type='checkbox' name='attr_rep-p14'>
+							<input type='checkbox' name='attr_rep-p15'>			
+							+1
+						</td>			
+						<td class='green'>			
+							<input type='checkbox' name='attr_rep-p21'>
+							<input type='checkbox' name='attr_rep-p22'>
+							<input type='checkbox' name='attr_rep-p23'>
+							<input type='checkbox' name='attr_rep-p24'>
+							<input type='checkbox' name='attr_rep-p25'>			
+							+2
+						</td>						
+						<td class='green'>			
+							<input type='checkbox' name='attr_rep-p31'>
+							<input type='checkbox' name='attr_rep-p32'>
+							<input type='checkbox' name='attr_rep-p33'>
+							<input type='checkbox' name='attr_rep-p34'>
+							<input type='checkbox' name='attr_rep-p35'>			
+							+3
+						</td>						
+					</tr>
+				</table>
+			</fieldset>
+		</div>
+	</div>
+</div>
+<div class='page2'>
+	<div class='onetworow'>
+		<div class='col'>
+			<div class='attribute'>
+				<input type='number' name='attr_charm'>
+				<span class='attributename'>Charm</span><span class='attributedefault'>[
+					<span class='adventurer'>+2</span>
+				]</span>
+			</div>
+			<div class='attribute'>
+				<input type='number' name='attr_cunning'>
+				<span class='attributename'>Cunning</span><span class='attributedefault'>[
+					<span class='adventurer'>+1</span>
+				]</span>
+			</div>
+			<div class='attribute'>
+				<input type='number' name='attr_finesse'>
+				<span class='attributename'>Finesse</span><span class='attributedefault'>[
+					<span class='adventurer'>0</span>
+				]</span>
+			</div>
+			<div class='attribute'>
+				<input type='number' name='attr_luck'>
+				<span class='attributename'>Luck</span><span class='attributedefault'>[
+					<span class='adventurer'>0</span>
+				]</span>
+			</div>
+			<div class='attribute'>
+				<input type='number' name='attr_might'>
+				<span class='attributename'>Might</span><span class='attributedefault'>[
+					<span class='adventurer'>-1</span>
+				]</span>
+			</div>
+			<div class='badbox'>
+				<input type='checkbox' name='attr_inj1'>
+				<input type='checkbox' name='attr_inj2'>
+				<input type='checkbox' name='attr_inj3'>
+				<input type='checkbox' name='attr_inj4'>
+				<span class='baddesc'>INJURY</span>
+			</div>
+			<div class='badbox'>
+				<input type='checkbox' name='attr_ex1'>
+				<input type='checkbox' name='attr_ex2'>
+				<input type='checkbox' name='attr_ex3'>
+				<input type='checkbox' name='attr_ex4'>
+				<span class='baddesc'>EXHAUSTION</span>
+			</div>
+			<div class='badbox'>
+				<input type='checkbox' name='attr_dep1'>
+				<input type='checkbox' name='attr_dep2'>
+				<input type='checkbox' name='attr_dep3'>
+				<input type='checkbox' name='attr_dep4'>
+				<span class='baddesc'>DEPLETION</span>
+			</div>
+			<div class='headtext'>Roguish Feats</div>
+			<table>
+				<tr>
+					<td><input type='checkbox' name='attr_rogue1'> Acrobatics</td>
+					<td><input type='checkbox' name='attr_rogue6'> Pick pocket</td>
+				</tr>
+				<tr>
+					<td><input type='checkbox' name='attr_rogue2'> Blindside</td>
+					<td><input type='checkbox' name='attr_rogue7'> Sneak</td>
+				</tr>
+				<tr>
+					<td><input type='checkbox' name='attr_rogue3'> Counterfeit</td>
+					<td><input type='checkbox' name='attr_rogue8'> Pick Lock</td>
+				</tr>
+				<tr>
+					<td><input type='checkbox' name='attr_rogue4'> Disable Device</td>
+					<td><input type='checkbox' name='attr_rogue9'> Sleight of Hand</td>
+				</tr>
+				<tr>
+					<td><input type='checkbox' name='attr_rogue5'> Hide</td>
+					<td></td>
+				</tr>
+			</table>
+			<div class='headtext'>Weapon Skills</div>
+			<table>
+				<tr>
+					<td><input type='checkbox' name='attr_weapon1'> Cleave</td>
+					<td><input type='checkbox' name='attr_weapon6'> Parry</td>
+				</tr>
+				<tr>
+					<td><input type='checkbox' name='attr_weapon2'> Confuse Senses</td>
+					<td><input type='checkbox' name='attr_weapon7'> Quick Shot</td>
+				</tr>
+				<tr>
+					<td><input type='checkbox' name='attr_weapon3'> Disarm</td>
+					<td><input type='checkbox' name='attr_weapon8'> Storm a Group</td>
+				</tr>
+				<tr>
+					<td><input type='checkbox' name='attr_weapon4'> Harry</td>
+					<td><input type='checkbox' name='attr_weapon9'> Trick Shot</td>
+				</tr>
+				<tr>
+					<td><input type='checkbox' name='attr_weapon5'> Improvise</td>
+					<td><input type='checkbox' name='attr_weapon10'> Vicious Strike</td>
+				</tr>
+			</table>			
+		</div>
+		<div class='col'>
+			<div class='headtext'>Your Moves</div>
+			<div>
+				<input type='checkbox' name='move1'>
+				<span class='movename'>
+					<span class='adventurer'>Toolbox</span>
+				</span>
+			</div>
+			<div class='movedesc'>
+				<span class='adventurer'>
+					You have a kit of tools and supplies with which you work on long-term projects. Choose two features:
+					assorted scrap wood, assorted gears and springs, esoteric hand tools, manuals, assorted medicines, portable alchemy kit, sewing kit, cookware, minor explosives
+					Choose one drawback: heavy (counts as 2 Load instead of 1), bulky & obvious, stolen, fragile
+					When you open up your toolkit and dedicate yourself to making a thing or to getting to the bottom of something, decide what and tell the GM. The GM will give you between 1 to 4 conditions you must fulfill to accomplish your goal, including time taken, materials needed, help needed, facilities/tools needed, or the limits on the project. 
+					When you accomplish the conditions, you accomplish the goal.
+				</span>
+			</div>	
+			<div>
+				<input type='checkbox' name='move1'>
+				<span class='movename'>
+					<span class='adventurer'>Toolbox</span>
+				</span>
+			</div>
+			<div class='movedesc'>
+				<span class='adventurer'>
+					You have a kit of tools and supplies with which you work on long-term projects. Choose two features:
+					assorted scrap wood, assorted gears and springs, esoteric hand tools, manuals, assorted medicines, portable alchemy kit, sewing kit, cookware, minor explosives
+					Choose one drawback: heavy (counts as 2 Load instead of 1), bulky & obvious, stolen, fragile
+					When you open up your toolkit and dedicate yourself to making a thing or to getting to the bottom of something, decide what and tell the GM. The GM will give you between 1 to 4 conditions you must fulfill to accomplish your goal, including time taken, materials needed, help needed, facilities/tools needed, or the limits on the project. 
+					When you accomplish the conditions, you accomplish the goal.
+				</span>
+			</div>
+			<div>
+				<input type='checkbox' name='move1'>
+				<span class='movename'>
+					<span class='adventurer'>Toolbox</span>
+				</span>
+			</div>
+			<div class='movedesc'>
+				<span class='adventurer'>
+					You have a kit of tools and supplies with which you work on long-term projects. Choose two features:
+					assorted scrap wood, assorted gears and springs, esoteric hand tools, manuals, assorted medicines, portable alchemy kit, sewing kit, cookware, minor explosives
+					Choose one drawback: heavy (counts as 2 Load instead of 1), bulky & obvious, stolen, fragile
+					When you open up your toolkit and dedicate yourself to making a thing or to getting to the bottom of something, decide what and tell the GM. The GM will give you between 1 to 4 conditions you must fulfill to accomplish your goal, including time taken, materials needed, help needed, facilities/tools needed, or the limits on the project. 
+					When you accomplish the conditions, you accomplish the goal.
+				</span>
+			</div>
+			<div>
+				<input type='checkbox' name='move1'>
+				<span class='movename'>
+					<span class='adventurer'>Toolbox</span>
+				</span>
+			</div>
+			<div class='movedesc'>
+				<span class='adventurer'>
+					You have a kit of tools and supplies with which you work on long-term projects. Choose two features:
+					assorted scrap wood, assorted gears and springs, esoteric hand tools, manuals, assorted medicines, portable alchemy kit, sewing kit, cookware, minor explosives
+					Choose one drawback: heavy (counts as 2 Load instead of 1), bulky & obvious, stolen, fragile
+					When you open up your toolkit and dedicate yourself to making a thing or to getting to the bottom of something, decide what and tell the GM. The GM will give you between 1 to 4 conditions you must fulfill to accomplish your goal, including time taken, materials needed, help needed, facilities/tools needed, or the limits on the project. 
+					When you accomplish the conditions, you accomplish the goal.
+				</span>
+			</div>
+			<div>
+				<input type='checkbox' name='move1'>
+				<span class='movename'>
+					<span class='adventurer'>Toolbox</span>
+				</span>
+			</div>
+			<div class='movedesc'>
+				<span class='adventurer'>
+					You have a kit of tools and supplies with which you work on long-term projects. Choose two features:
+					assorted scrap wood, assorted gears and springs, esoteric hand tools, manuals, assorted medicines, portable alchemy kit, sewing kit, cookware, minor explosives
+					Choose one drawback: heavy (counts as 2 Load instead of 1), bulky & obvious, stolen, fragile
+					When you open up your toolkit and dedicate yourself to making a thing or to getting to the bottom of something, decide what and tell the GM. The GM will give you between 1 to 4 conditions you must fulfill to accomplish your goal, including time taken, materials needed, help needed, facilities/tools needed, or the limits on the project. 
+					When you accomplish the conditions, you accomplish the goal.
+				</span>
+			</div>
+			<div>
+				<input type='checkbox' name='move1'>
+				<span class='movename'>
+					<span class='adventurer'>Toolbox</span>
+				</span>
+			</div>
+			<div class='movedesc'>
+				<span class='adventurer'>
+					You have a kit of tools and supplies with which you work on long-term projects. Choose two features:
+					assorted scrap wood, assorted gears and springs, esoteric hand tools, manuals, assorted medicines, portable alchemy kit, sewing kit, cookware, minor explosives
+					Choose one drawback: heavy (counts as 2 Load instead of 1), bulky & obvious, stolen, fragile
+					When you open up your toolkit and dedicate yourself to making a thing or to getting to the bottom of something, decide what and tell the GM. The GM will give you between 1 to 4 conditions you must fulfill to accomplish your goal, including time taken, materials needed, help needed, facilities/tools needed, or the limits on the project. 
+					When you accomplish the conditions, you accomplish the goal.
+				</span>
+			</div>
+		</div>
+	</div>
+	<div class='equipbox'>
+		<div class='equipheader'>
+		</div>
+	</div>
+</div>
+<div class="selectclass">
+	I am a...<select name="attr_class">
+		<option value="">Select Class</option>
+		<option value="adventurer">Adventurer</option>
+		<option value="arbiter">Arbiter</option>
+	<option value="harrier">Harrier</option>
+	<option value="ranger">Ranger</option>
+	<option value="ronin">Ronin</option>
+	<option value="scoundrel">Scoundrel</option>
+	<option value="thief">Thief</option>
+	<option value="tinker">Tinker</option>
+	<option value="vagrant">Vagrant</option>
+	</select>
+</div>
