@@ -1,374 +1,828 @@
-<input type='hidden' class='character_class' name='attr_class'>
-<div class='page1'>
-	<div class='header'>
-		<div class='classname'>
-			<span class='adventurer'>The Adventurer</span>
-		</div>
-		<div class='classdesc'>
-			<span class='adventurer'>You are a peaceful, diplomatic vagabond, making allies from those you aid, perhaps toppling greater powers by forging strong bonds with others from yourself.</span>
-		</div>
-	</div>
-	<div class='3colrow'>
-		<div class='col'>
-			<label>Name</label>
-			<input name='attr_character_name' type='text'>
-			<label>Species</label>
-			<input name='attr_character_name' type='text'>
-			<label>Details</label>
-			<ul>
-				<li></li>
-				<li></li>
-				<li></li>
-			</ul>
-			<label>Demeanor</label>
-			<ul>
-				<li></li>
-			</ul>
-			<div class='backgroundbox'>
-				<label>Background</label>
-				<span class='bold' data-i18n="test">Where do you call home?</span>
-				<input type='radio' name='attr_home' value="0"><span class='adventurer' name='prebox_home'></span><input type='text' name='attr_homeword'><span name='postbox_home'></span>
-				<input type='radio' name='attr_home' value="1"><span class='adventurer' name='home2'></span>
-				<input type='radio' name='attr_home' value="2"><span class='adventurer' name='home3'></span>
-				<span class='bold'>Why are you a vagabond?</span>
-				<input type='radio' name='attr_raison' value="0">
-				<span class='adventurer' name='reason1'></span>
-				<input type='radio' name='attr_raison' value="1"><span class='adventurer' name='reason2'></span>
-				<input type='radio' name='attr_raison' value="2"><span class='adventurer' name='reason3'></span>
-				<input type='radio' name='attr_raison' value="3"><span class='adventurer' name='reason4'></span>
-				<input type='radio' name='attr_raison' value="4"><span class='adventurer' name='reason5'></span>			
-				<span class='bold'>Whom have you left behind?</span>
-				<input type='radio' name='attr_left' value="0"><span class='adventurer' name='left1'></span>
-				<input type='radio' name='attr_left' value="1"><span class='adventurer' name='left2'></span>
-				<input type='radio' name='attr_left' value="2"><span class='adventurer' name='left3'></span>
-				<input type='radio' name='attr_left' value="3"><span class='adventurer' name='left4'></span>
-				<input type='radio' name='attr_left' value="4"><span class='adventurer' name='left5'></span>		
-				<span class='bold'>Which faction have you served the most?</span>
-				<span name='mark2pres'></span>
-				<span class='bold'>With which faction have you earned a special enmity?</span>
-				<span name='mark1not'></span>
-			</div>
-		</div>
-		<div class='col'>
-			<div class='specbox'>
-				Your Drives
-			</div>
-			<div class='yellowcap'>Choose Two Drives</div>
-			<input class='checkbox' name="attr_drive1"><label class="adventurer drivelabel">Ambition</label>	
-			<span class='adventurer drivetext' name='drive1text'></span>
-			<input class='checkbox' name="attr_drive2"><label class="adventurer drivelabel">Clean Paws</label>
-			<span class='adventurer drivetext' name='drive2text'></span>
-			<input class='checkbox' name="attr_drive3"><label class="adventurer drivelabel">Principles</label>
-			<span class='adventurer drivetext' name='drive3text'></span>
-			<input class='checkbox' name="attr_drive4"><label class="adventurer drivelabel">Justice</label>
-			<span class='adventurer drivetext' name='drive4text'></span>
-		</div>
-		<div class='col'>
-			<div class="naturetext">Choose Your Nature</div>
-			<div class='patternbox'>
-				<input type='checkbox' class='bigcheck' name="attr_nature1"><span class="adventurer">Extrovert</span>
-			</div>
-			<div class="naturedesc">
-				<span class='adventurer'>Clear your exhaustion track when you share a moment of real warmth, friendship, or enjoyment with someone.</span>
-			</div>
-			<div class='patternbox'>
-				<input type='checkbox' class='bigcheck' name="attr_nature2"><span class="adventurer">Peacemaker</span>
-			</div>
-			<div class="naturedesc">
-				<span class='adventurer'>Clear your exhaustion track when you resolve a dangerous conflict nonviolently.</span>
-			</div>	
-			
-			<div class="connections">Your Connections</div>
-			<div class="connectiontitle"><span class="adventurer">Partner</span></div>
-			<div class="adventurer">
-				<input name="attr_connection1"><span> and I fought alongside each other to defend a clearing from a faction's advances... but we failed. Why did we defend the clearing? Why did we fail? Who defeated us?</span>
-				
-			</div>
-			<div class="dotteddesc">
-				When you fill in this connection, you each mark 2-prestige with the faction you helped, and mark 2-notoriety with the faction you harmed. During play, if you are spotted together, then any prestige or notoriety gains with those factions are doubled for the two of you.
-			</div>
-			<div class="connectiontitle"><span class="adventurer">Friend</span></div>
-			<div class="adventurer">
-				<span>I traveled with</span> <input name="attr_connection2"><span> for the time right after I became a vagabond. They helped keep me safe and showed me the Woodland. What keepsake did I gift them?</span>
-				
-			</div>
-			<div class="dotteddesc">
-				When you <strong>help</strong> them, you can mark 2-exhaustion to give a +2, instead of 1-exhaustion for a +1.
-			</div>
-			
-		</div>
-	</div>
-	<div>
-		<div class='reputation'>YOUR REPUTATION</div>
-		<div>
-			<fieldset name='repeating_reputation'>
-				<table>
-					<tr>
-						<td>
-							<input name='attr_rep-name'>
-						</td>
-						<td class='red'>
-							-3
-							<input type='checkbox' name='attr_rep-n31'>
-							<input type='checkbox' name='attr_rep-n32'>
-							<input type='checkbox' name='attr_rep-n33'>
-						</td>
-						<td class='red'>
-							-2
-							<input type='checkbox' name='attr_rep-n21'>
-							<input type='checkbox' name='attr_rep-n22'>
-							<input type='checkbox' name='attr_rep-n23'>
-						</td>			
-						<td class='red'>
-							-1
-							<input type='checkbox' name='attr_rep-n11'>
-							<input type='checkbox' name='attr_rep-n12'>
-							<input type='checkbox' name='attr_rep-n13'>
-						</td>			
-						<td>
-							0
-						</td>
-						<td class='green'>
-							<input type='checkbox' name='attr_rep-p11'>
-							<input type='checkbox' name='attr_rep-p12'>
-							<input type='checkbox' name='attr_rep-p13'>
-							<input type='checkbox' name='attr_rep-p14'>
-							<input type='checkbox' name='attr_rep-p15'>			
-							+1
-						</td>			
-						<td class='green'>			
-							<input type='checkbox' name='attr_rep-p21'>
-							<input type='checkbox' name='attr_rep-p22'>
-							<input type='checkbox' name='attr_rep-p23'>
-							<input type='checkbox' name='attr_rep-p24'>
-							<input type='checkbox' name='attr_rep-p25'>			
-							+2
-						</td>						
-						<td class='green'>			
-							<input type='checkbox' name='attr_rep-p31'>
-							<input type='checkbox' name='attr_rep-p32'>
-							<input type='checkbox' name='attr_rep-p33'>
-							<input type='checkbox' name='attr_rep-p34'>
-							<input type='checkbox' name='attr_rep-p35'>			
-							+3
-						</td>						
-					</tr>
-				</table>
-			</fieldset>
-		</div>
-	</div>
+<input type='hidden' class='character_class' name='attr_class' value="none">
+<div class='pagetoggle'>
+	<input type='hidden' class="curpage" name='attr_curpage' value="1">
+	<input type='radio' id='page1' name='attr_curpage' value='1'><label for="page1">Page 1</label>
+	<input type='radio' id='page2' name='attr_curpage' value='2'><label for="page2">Page 2</label>
+	<input type='radio' id='pageclass' name='attr_class' value='none'><label for="pageclass">Class Select</label>
 </div>
-<div class='page2'>
-	<div class='onetworow'>
-		<div class='col'>
-			<div class='attribute'>
-				<input type='number' name='attr_charm'>
-				<span class='attributename'>Charm</span><span class='attributedefault'>[
-					<span class='adventurer'>+2</span>
-				]</span>
+<div class='page'>
+	<div class="border">
+		<input type='hidden' class="curpage" name='attr_curpage' value="1">
+		<div class='page1'>
+			<div class='header'>
+				<div class='classname'>
+					<span class='adventurer'>The Adventurer</span>
+					<span class='arbiter'>The Arbiter</span>
+					<span class='harrier'>The Harrier</span>
+					<span class='ranger'>The Ranger</span>
+					<span class='ronin'>The Ronin</span>
+					<span class='scoundrel'>The Scoundrel</span>
+					<span class='thief'>The Thief</span>
+					<span class='tinker'>The Tinker</span>
+					<span class='vagrant'>The Vagrant</span>					
+				</div>
+				<div class='classdesc'>
+					<span class='adventurer'>You are a peaceful, diplomatic vagabond, making allies from those you aid, perhaps toppling greater powers by forging strong bonds with others from yourself.</span>
+					<span class='arbiter'>You are a powerful, obstinate vagabond, serving as somewhere between a mercenary and a protector, perhaps taking sides too easily in the greater conflict between the factions.</span>
+					<span class='harrier'>You are a quick, enterprising vagabond, racing easily from building to building and clearing to clearing without anything stopping you, perhaps finding yourself in places others would rather keep secret or hidden.</span>
+					<span class='ranger'>You are a capable, stealthy vagabond, centered on the forests that fill the Woodland between the clearings, more interested in the wilds than in the company of other Woodland denizens or their society.</span>
+					<span class='ronin'>You are a skilled, willful vagabond, formerly a servant of a lord in a different land, now masterless. You came to the Woodland to live as a free vagabond.</span>
+					<span class='scoundrel'>You are a lucky, dangerous vagabond, acting more as destroyer and troublemaker than anything else, perhaps creating chaos and destruction for its own sake.</span>
+					<span class='thief'>You are a cunning, criminal vagabond, capable of stealing even the most well-guarded treasures, perhaps committed to crime and theft for its own sake.</span>
+					<span class='tinker'>You are an adept, clever vagabond, interested in mechanisms and craftsmanship, perhaps possessed of ideas that separate you from those around you.</span>
+					<span class='vagrant'>You are a charming, survivor vagabond, using words to get out of dangerous situations, perhaps even setting possible predators upon each other to keep them away from yourself.</span>					
+				</div>
 			</div>
-			<div class='attribute'>
-				<input type='number' name='attr_cunning'>
-				<span class='attributename'>Cunning</span><span class='attributedefault'>[
-					<span class='adventurer'>+1</span>
-				]</span>
+			<div class='p1row'>
+				<div class='col1'>
+					<label>Name</label>
+					<input name='attr_character_name' type='text'>
+					<label>Species</label>
+					<input name='attr_species' type='text'>
+					<label>Details</label>
+					<ul>
+						<li><input name='attr_detail1' type='text'></li>
+						<li><input name='attr_detail2' type='text'></li>
+						<li><input name='attr_detail3' type='text'></li>
+					</ul>
+					<label>Demeanor</label>
+					<ul>
+						<li><input name='attr_demeanor' type='text'></li>
+					</ul>
+					<div class='backgroundbox'>
+						<label>Background</label>
+						<span class='bold'>Where do you call home?</span>
+						<div><input type='radio' name='attr_home' value="0"><input type='text' name='attr_homeword'> clearing</div>
+						<div>
+							<input type='radio' name='attr_home' value="1"><span class='break'>the forest</span>
+						</div>
+						<div>
+							<input type='radio' name='attr_home' value="2"><span>a place far from here</span>
+						</div>
+						<span class='bold'>Why are you a vagabond?</span>
+						<div><input type='radio' name='attr_raison' value="0">
+							<span class='adventurer'>I want to help the Woodland</span>
+							<span class='arbiter'>I’m being hunted by a powerful official</span>
+							<span class='harrier'>I want to fight for Woodland freedom</span>
+							<span class='ranger'>I dislike the hypocrisy of society</span>
+							<span class='ronin'>I want to build a masterless life</span>
+							<span class='scoundrel'>I am on the run for a destructive crime</span>
+							<span class='thief'>I have no better way to get food, water, shelter, and money</span>
+							<span class='tinker'>I refuse to keep my ideas to myself</span>
+							<span class='vagrant'>I am being hunted by a powerful vagabond</span>
+						</div>
+						<div>
+							<input type='radio' name='attr_raison' value="1">
+							<span class='adventurer'>I want to explore the Woodland</span>
+							<span class='arbiter'>I wish to make up for a past transgression</span>
+							<span class='harrier'>I am chasing a loved one</span>
+							<span class='ranger'>I am mistrusted by other denizens</span>
+							<span class='ronin'>I seek a cause to redeem myself</span>
+							<span class='scoundrel'>I seek vengeance for my suffering</span>
+							<span class='thief'>I am on the run from “associates”</span>
+							<span class='tinker'>I need to rebuild my workshop anew in a safe place</span>
+							<span class='vagrant'>I can’t settle down with the denizen I truly love</span>
+						</div>
+						<div>
+							<input type='radio' name='attr_raison' value="2">
+							<span class='adventurer'>I believe the current factions should be overturned</span>
+							<span class='arbiter'>I want to fight injustice</span>
+							<span class='harrier'>I am on the run for my crimes</span>
+							<span class='ranger'>I want to wander the Woodland</span>
+							<span class='ronin'>I aim to bring a hunted foe to justice</span>
+							<span class='scoundrel'>I wish to defeat a faction</span>
+							<span class='thief'>I am mistrusted by other denizens</span>
+							<span class='tinker'>I crave adventure</span>
+							<span class='vagrant'>I seek to depose corrupt and dangerous leaders</span>							
+						</div>
+						<div>
+							<input type='radio' name='attr_raison' value="3">
+							<span class='adventurer'>I must keep a promise to a loved one</span>
+							<span class='arbiter'>I must clear my tarnished name</span>
+							<span class='harrier'>I feel a deep wanderlust</span>
+							<span class='ranger'>I need to find and save a loved one</span>
+							<span class='ronin'>I am hunted by old foes</span>
+							<span class='scoundrel'>I am mistrusted by other denizens</span>
+							<span class='thief'>I am pursuing a treasure</span>
+							<span class='tinker'>I need to find and save my family</span>
+							<span class='vagrant'>I feel deep wanderlust</span>							
+						</div>
+						<div>
+							<input type='radio' name='attr_raison' value="4">
+							<span class='adventurer'>I want freedom from society’s constraints</span>
+							<span class='arbiter'>I have been exiled from most clearings</span>
+							<span class='harrier'>I am on the run from a commitment at home</span>
+							<span class='ranger'>I seek escape from the wars</span>
+							<span class='ronin'>I need freedom to fulfill my master’s last wish</span>
+							<span class='scoundrel'>I want to be free from society’s bonds</span>
+							<span class='thief'>I am being hunted by a powerful official</span>
+							<span class='tinker'>I need to keep my most dangerous design safe</span>
+							<span class='vagrant'>I am on the run for my lies</span>
+						</div>
+						<span class='bold adventurer arbiter harrier ranger scoundrel thief tinker vagrant'>Whom have you left behind?</span>
+						<span class='bold ronin'>What happened to your last master?</span>
+						<div>
+							<input type='radio' name='attr_left' value="0">
+							<span class='adventurer'>My mentor</span>
+							<span class='arbiter'>My peer and friend</span>
+							<span class='harrier'>My teacher</span>
+							<span class='ranger'>my commander</span>
+							<span class='ronin'>Assassination</span>
+							<span class='scoundrel'>my teacher</span>
+							<span class='thief'>my partner-in-crime</span>
+							<span class='tinker'>my mentor</span>
+							<span class='vagrant'>my partner in crime</span>
+						</div>
+						<div>
+							<input type='radio' name='attr_left' value="1">
+							<span class='adventurer'>My family</span>
+							<span class='arbiter'>My family</span>
+							<span class='harrier'>My family</span>
+							<span class='ranger'>my family</span>
+							<span class='ronin'>Unjust imprisonment</span>
+							<span class='scoundrel'>my family</span>
+							<span class='thief'>my family</span>
+							<span class='tinker'>my family</span>
+							<span class='vagrant'>my family</span>
+						</div>
+						<div>
+							<input type='radio' name='attr_left' value="2">
+							<span class='adventurer'>My loved one</span>
+							<span class='arbiter'>my loved one</span>
+							<span class='harrier'>My loved one</span>
+							<span class='ranger'>my best friend</span>
+							<span class='ronin'>Disappearance</span>
+							<span class='scoundrel'>my loved one</span>
+							<span class='thief'>my loved one</span>
+							<span class='tinker'>my best friend</span>
+							<span class='vagrant'>my loved one</span>
+						</div>
+						<div>
+							<input type='radio' name='attr_left' value="3">
+							<span class='adventurer'>My student</span>
+							<span class='arbiter'>my ward</span>
+							<span class='harrier'>My idol</span>
+							<span class='ranger'>my student</span>
+							<span class='ronin'>Justified overthrow</span>
+							<span class='scoundrel'>my only defender</span>
+							<span class='thief'>my protector</span>
+							<span class='tinker'>my loved one</span>
+							<span class='vagrant'>my boss</span>
+						</div>
+						<div>
+							<input type='radio' name='attr_left' value="4">
+							<span class='adventurer'>My greatest ally</span>
+							<span class='arbiter'>my commander</span>
+							<span class='harrier'>My best friend</span>
+							<span class='ranger'>no one—I lost those who mattered to me. (mark notoriety with the faction responsible)</span>
+							<span class='ronin'>Betrayal</span>
+							<span class='scoundrel'>my best friend</span>
+							<span class='thief'>my benefactor</span>
+							<span class='tinker'>my leader</span>
+							<span class='vagrant'>my best friend</span>
+						</div>
+						<span class='bold'>Which faction have you served the most?</span>
+						<span name='mark2pres'>(mark two prestige for appropriate group)</span>
+						<span class='bold'>With which faction have you earned a special enmity?</span>
+						<span name='mark1not'>(mark one notoriety for appropriate group)</span>
+					</div>
+				</div>
+				<div class='col2'>
+					<div class='specbox'>
+						<div class="whitebox">
+							Your Drives
+						</div>
+					</div>
+					<div class='yellowcap'>Choose Two Drives</div>
+					<div>
+						<input class="inline" type="checkbox" name="attr_drive1">
+						<label class="inline adventurer drivelabel">Ambition</label>	
+						<label class="inline arbiter drivelabel">Justice</label>	
+						<label class="inline harrier drivelabel">Crime</label>	
+						<label class="inline ranger drivelabel">Discovery</label>	
+						<label class="inline ronin drivelabel">Principles</label>	
+						<label class="inline scoundrel drivelabel">Chaos</label>	
+						<label class="inline thief drivelabel">Freedom</label>	
+						<label class="inline tinker drivelabel">Greed</label>	
+						<label class="inline vagrant drivelabel">Chaos</label>	
+						<div class="drivetext">
+							<span class='adventurer'>Advance when you increase your reputation with any faction.</span>
+							<span class='arbiter'>Advance when you achieve justice for someone wronged by a powerful, wealthy, or high-status individual.</span>
+							<span class='harrier'>Advance when you illicitly score a significant prize or pull off an illegal caper against impressive odds.</span>
+							<span class='ranger'>Advance when you encounter a new wonder or ruin in the forests.</span>
+							<span class='ronin'>Advance when you express or embody your moral principles at great cost to yourself or your allies.</span>
+							<span class='scoundrel'>Advance when you topple a tyrannical or dangerously overbearing figure or order.</span>
+							<span class='thief'>Advance when you free a group of denizens from oppression.</span>
+							<span class='tinker'>Advance when you secure a serious payday or treasure.</span>
+							<span class='vagrant'>Advance when you topple a tyrannical or dangerously overbearing figure or order.</span>
+						</div>
+					</div>
+					<div>
+						<input class="inline" type="checkbox" name="attr_drive2">
+						<label class="inline adventurer drivelabel">Clean paws</label>	
+						<label class="inline arbiter drivelabel">Principles</label>	
+						<label class="inline harrier drivelabel">Discovery</label>	
+						<label class="inline ranger drivelabel">Freedom</label>	
+						<label class="inline ronin drivelabel">Revenge</label>	
+						<label class="inline scoundrel drivelabel">Thrills</label>	
+						<label class="inline thief drivelabel">Greed</label>	
+						<label class="inline tinker drivelabel">Ambition</label>	
+						<label class="inline vagrant drivelabel">Thrills</label>	
+						<div class="drivetext">					
+							<span class='adventurer'>Advance when you accomplish an illicit, criminal goal while maintaining a believable veneer of innocence.</span>
+							<span class='arbiter'>Advance when you express or embody your moral principles at great cost to yourself or your allies.</span>
+							<span class='harrier'>Advance when you encounter a new wonder or ruin in the forests.</span>
+							<span class='ranger'>Advance when you free a group of denizens from oppression.</span>
+							<span class='ronin'>Name your foe. Advance when you cause significant harm to them or their interests.</span>
+							<span class='scoundrel'>Advance when you escape from certain death or incarceration.</span>
+							<span class='thief'>Advance when you secure a serious payday or treasure.</span>
+							<span class='tinker'>Advance when you increase your reputation with any faction.</span>
+							<span class='vagrant'>Advance when you escape from certain death or incarceration.</span>
+						</div>					
+					</div>
+					<div>
+						<input class="inline" type="checkbox" name="attr_drive3">
+						<label class="inline adventurer drivelabel">Principles</label>	
+						<label class="inline arbiter drivelabel">Loyalty</label>	
+						<label class="inline harrier drivelabel">Infamy</label>	
+						<label class="inline ranger drivelabel">Revenge</label>	
+						<label class="inline ronin drivelabel">Thrills</label>	
+						<label class="inline scoundrel drivelabel">Crime</label>	
+						<label class="inline thief drivelabel">Ambition</label>	
+						<label class="inline tinker drivelabel">Revenge</label>	
+						<label class="inline vagrant drivelabel">Clean Paws</label>	
+						<div class="drivetext">					
+							<span class='adventurer'>Advance when you express or embody your moral principles at great cost to yourself or your allies.</span>
+							<span class='arbiter'>You’re loyal to someone; name them. Advance when you obey their order at a great cost to yourself.</span>
+							<span class='harrier'>Advance when you decrease your reputation with any faction.</span>
+							<span class='ranger'>Name your foe. Advance when you cause significant harm to them or their interests.</span>
+							<span class='ronin'>Advance when you escape from certain death or incarceration.</span>
+							<span class='scoundrel'>Advance when you illicitly score a significant prize or pull off an illegal caper against impressive odds.</span>
+							<span class='thief'>Advance when you increase your reputation with any faction.</span>
+							<span class='tinker'>Name your foe. Advance when you cause significant harm to them or their interests.</span>
+							<span class='vagrant'>Advance when you accomplish an illicit, criminal goal while maintaining a believable veneer of innocence.</span>
+						</div>					
+					</div>
+					<div>
+						<input class="inline" type="checkbox" name="attr_drive4">
+						<label class="inline adventurer drivelabel">Justice</label>	
+						<label class="inline arbiter drivelabel">Protection</label>	
+						<label class="inline harrier drivelabel">Wanderlust</label>	
+						<label class="inline ranger drivelabel">Protection</label>	
+						<label class="inline ronin drivelabel">Wanderlust</label>	
+						<label class="inline scoundrel drivelabel">Infamy</label>	
+						<label class="inline thief drivelabel">Thrills</label>	
+						<label class="inline tinker drivelabel">Protection</label>	
+						<label class="inline vagrant drivelabel">Wanderlust</label>	
+						<div class="drivetext">					
+							<span class='adventurer'>Advance when you achieve justice for someone wronged by a powerful, wealthy, or high-status individual.</span>
+							<span class='arbiter'>Name your ward. Advance when you protect them from significant danger, or when time passes and your ward is safe.</span>
+							<span class='harrier'>Advance when you finish a journey to a clearing.</span>
+							<span class='ranger'>Name your ward. Advance when you protect them from significant danger, or when time passes and your ward is safe.</span>
+							<span class='ronin'>Advance when you finish a journey to a clearing.</span>
+							<span class='scoundrel'>Advance when you decrease your reputation with any faction.</span>
+							<span class='thief'>Advance when you escape from certain death or incarceration.</span>
+							<span class='tinker'>Name your ward. Advance when you protect them from significant danger, or when time passes and your ward is safe.</span>
+							<span class='vagrant'>Advance when you finish a journey to a clearing.</span>
+						</div>
+					</div>
+				</div>
+				<div class='col3'>
+					<div class="yellowcap">Choose Your Nature</div>
+					<div class='specbox'>
+						<div class="whitebox">
+							<input type='checkbox' class='bigcheck' name="attr_nature1">
+							<span class='adventurer'>Extrovert</span>
+							<span class='arbiter'>Defender</span>
+							<span class='harrier'>Dutiful</span>
+							<span class='ranger'>Loner</span>
+							<span class='ronin'>Survivor</span>
+							<span class='scoundrel'>Arsonist</span>
+							<span class='thief'>Kleptomaniac</span>
+							<span class='tinker'>Perfectionist</span>
+							<span class='vagrant'>Glutton</span>
+						</div>
+					</div>
+					<div class="naturedesc">
+						<span class='adventurer'>Clear your exhaustion track when you share a moment of real warmth, friendship, or enjoyment with someone.</span>
+						<span class='arbiter'>Clear your exhaustion track when you put yourself in harm’s way to defend someone against injustice or dire threat.</span>
+						<span class='harrier'>Clear your exhaustion track when you take on a dangerous or difficult task on behalf of another.</span>
+						<span class='ranger'>Clear your exhaustion track when you enter a dangerous situation alone, without backup or assistance.</span>
+						<span class='ronin'>Clear your exhaustion track when you try to flee or cover allies’ flight from a dangerous or overwhelming situation.</span>
+						<span class='scoundrel'>Clear your exhaustion track when you use needlessly destructive or damaging methods to solve a problem.</span>
+						<span class='thief'>Clear your exhaustion track when you try to selfishly steal something valuable or important.</span>
+						<span class='tinker'>Clear your exhaustion track when you replace someone else’s existing tool or resource with something truly great</span>
+						<span class='vagrant'>Clear your exhaustion track when you overindulge on vices like drink, food, and gambling.</span>
+					</div>
+					<div class='specbox'>
+						<div class="whitebox">
+							<input type='checkbox' class='bigcheck' name="attr_nature2">
+							<span class='adventurer'>Peacemaker</span>
+							<span class='arbiter'>Punisher</span>
+							<span class='harrier'>Competitive</span>
+							<span class='ranger'>Cynic</span>
+							<span class='ronin'>Pilgrim</span>
+							<span class='scoundrel'>Combative</span>
+							<span class='thief'>Rebellious</span>
+							<span class='tinker'>Radical</span>
+							<span class='vagrant'>Hustler</span>
+						</div>
+					</div>
+					<div class="naturedesc">
+						<span class='adventurer'>Clear your exhaustion track when you resolve a dangerous conflict nonviolently.</span>
+						<span class='arbiter'>Clear your exhaustion track when you tell a powerful or dangerous villain to their face that you will punish them.</span>
+						<span class='harrier'>Clear your exhaustion track when you take dramatically unnecessary risks to show off.</span>
+						<span class='ranger'>Clear your exhaustion track when you openly and directly ask dangerous questions about an accepted “truth”.</span>
+						<span class='ronin'>Clear your exhaustion track when you find an expert in a skill you don’t possess.</span>
+						<span class='scoundrel'>Clear your exhaustion track when you try to start a fight against overwhelming opposition.</span>
+						<span class='thief'>Clear your exhaustion track when you grievously insult, defy, or anger figures of authority.</span>
+						<span class='tinker'>Clear your exhaustion track when you espouse dangerous ideas to the wrong audience.</span>
+						<span class='vagrant'>Clear your exhaustion track when you try to spring a con on a powerful or dangerous mark.</span>
+					</div>	
+					
+					<div class="connections">Your Connections</div>
+					<div class="connectiontitle">
+						<span class='adventurer'>Partner</span>
+						<span class='arbiter'>Protector</span>
+						<span class='harrier'>Peer</span>
+						<span class='ranger'>Watcher</span>
+						<span class='ronin'>Partner</span>
+						<span class='scoundrel'>Friend</span>
+						<span class='thief'>Peer</span>
+						<span class='tinker'>Peer</span>
+						<span class='vagrant'>Family</span>
+					</div>
+					<div class="adventurer">
+						<input name="attr_connection1" type='text'> and I fought alongside each other to defend a clearing from a faction's advances... but we failed. Why did we defend the clearing? Why did we fail? Who defeated us?</span>					
+					</div>
+					<div class="arbiter">
+					I once protected <input name="attr_connection1" type='text'> from a mortal blow during a fight, and I would do it again. Why?</span>										
+					</div>
+					<div class="harrier">
+						<input name="attr_connection1" type='text'> and I tried to blaze a new trail between two clearings; without the support of the major factions, it never fully came to fruition.</span>					
+					</div>
+					<div class="ranger">
+					I was tricked, conned, or deceived by <input name="attr_connection1" type='text'> once. Why do I choose to continue working with them?</span>					
+					</div>
+					<div class="ronin">
+						<input name="attr_connection1" type='text'> and I worked together on my first real task of significance in the Woodland, deposing a dangerous authority figure of a faction. Who did we depose? Why?</span>					
+					</div>
+					<div class="scoundrel">
+						<input name="attr_connection1" type='text'> and I once met and pulled off a mad, impossible stunt together. What did we do? Why?</span>					
+					</div>
+					<div class="thief">
+						I stole something important, something needed or craved, for <input name="attr_connection1" type='text'>. I proved my worth to them.</span>					
+					</div>
+					<div class="tinker">
+						<input name="attr_connection1" type='text'> and I have been working together well for a while. We read each other’s moves easily.</span>					
+					</div>
+					<div class="vagrant">
+						After <input name="attr_connection1" type='text'> and I pulled off an impressive heist and stole something very valuable from a powerful faction, my bad choices landed me in dire straits. But they bailed me out, and we’ve been close ever since.</span>					
+					</div>
+					<div class="dotteddesc">
+						<span class='adventurer'>When you fill in this connection, you each mark 2-prestige with the faction you helped, and mark 2-notoriety with the faction you harmed. During play, if you are spotted together, then any prestige or notoriety gains with those factions are doubled for the two of you.</span>
+						<span class='arbiter'>When they are in reach, mark exhaustion to take a blow meant for them. If you do, take +1 ongoing to weapon moves for the rest of the scene.</span>
+						<span class='harrier thief tinker'>If you share information with them after <strong>reading a tense situation</strong>, you both benefit from the +1 for acting on the answers. If you <strong>help</strong> them while they <strong>attempt a roguish feat</strong>, you gain choices on the help move as if you had marked 2-exhaustion when you mark 1-exhaustion.</span>
+						<span class='ranger'>When you <strong>figure them out</strong>, you always hold 1, even on a miss. When you<strong> plead with them to go along with you</strong>, you can let them clear 2-exhaustion instead of 1.</span>
+						<span class='ronin'>When you fill in this connection, you each mark 2-prestige with the faction you helped, and mark 2-notoriety with the faction you harmed. During play, if you are spotted together, then any prestige or notoriety gains with those factions are doubled for the two of you.</span>
+						<span class='scoundrel'>When you <strong>help</strong> them, you can mark 2-exhaustion to give a +2, instead of 1-exhaustion for a +1.</span>						
+						<span class='vagrant'>When you help them fulfill their nature, you both clear your exhaustion track.</span>				
+						
+					</div>
+					<div class="connectiontitle">
+						<span class='adventurer'>Friend</span>
+						<span class='arbiter'>Partner</span>
+						<span class='harrier'>Friend</span>
+						<span class='ranger'>Protector</span>
+						<span class='ronin'>Watcher</span>
+						<span class='scoundrel'>Partner</span>
+						<span class='thief'>Friend</span>
+						<span class='tinker'>Family</span>
+						<span class='vagrant'>Watcher</span>
+					</div>
+					<div class="adventurer">
+						I traveled with</span> <input name="attr_connection2" type='text'> for the time right after I became a vagabond. They helped keep me safe and showed me the Woodland. What keepsake did I gift them?</span>						
+					</div>
+					<div class="arbiter">
+						<input name="attr_connection2" type='text'> and I together helped a faction take control of a clearing, and share responsibility for it.</span>					
+					</div>
+					<div class="harrier">
+						<input name="attr_connection2" type='text'> and I forged a bond while investigating a ruin deep in the woods. What strange minor trinkets do each of you carry from that expedition?</span>					
+					</div>
+					<div class="ranger">
+						I did something that would have gotten me the enmity of a Woodland faction — if<input name="attr_connection2" type='text'> hadn’t covered for me. What did I do? Why and how did they protect me? Regardless, I feel indebted to them.</span>					
+					</div>
+					<div class="ronin">
+						I see in <input name="attr_connection2" type='text'> many reminders of my old master. I am drawn to them, even as I watch them carefully. What is it that reminds me of my old master? How do they feel about my watchful eyes?</span>					
+					</div>
+					<div class="scoundrel">
+						<input name="attr_connection2" type='text'> and I destroyed a faction’s resource, on behalf of an opposing faction. Why?</span>					
+					</div>
+					<div class="thief">
+						<input name="attr_connection2" type='text'> sprang to get me out of holding, whether they bailed me out or rescued me. I owe them.</span>					
+					</div>
+					<div class="tinker">
+						<input name="attr_connection2" type='text'> and I had each other’s back when we were run out of a clearing because our natures got out of hand.</span>					
+					</div>
+					<div class="vagrant">
+						<input name="attr_connection2" type='text'> saw through one of my cons, and turned it back on me. How? Why did we forgive each other?</span>					
+					</div>					
+					<div class="dotteddesc">
+						<span class='adventurer harrier thief'>When you <strong>help</strong> them, you can mark 2-exhaustion to give a +2, instead of 1-exhaustion for a +1.</span>
+						<span class='arbiter scoundrel'>When you fill in this connection, you each mark 2-prestige with the faction you helped, and mark 2-notoriety with the faction you harmed. During play, if you are spotted together, then any prestige or notoriety gains with those factions are doubled for the two of you.</span>
+						<span class='ranger'>When they are in reach, mark exhaustion to take a blow meant for them. If you do, take +1 ongoing to weapon moves for the rest of the scene.</span>
+						<span class='ronin vagrant'>When you <strong>figure them out</strong>, you always hold 1, even on a miss. When you<strong> plead with them to go along with you</strong>, you can let them clear 2-exhaustion instead of 1.</span>
+						<span class='tinker'>When you help them fulfill their nature, you both clear your exhaustion track.</span>
+					</div>
+					
+				</div>
 			</div>
-			<div class='attribute'>
-				<input type='number' name='attr_finesse'>
-				<span class='attributename'>Finesse</span><span class='attributedefault'>[
-					<span class='adventurer'>0</span>
-				]</span>
+			<div>
+				<div class='reputation yellowcap'>YOUR REPUTATION</div>
+				<div>
+					<fieldset class='repeating_reputation'>
+						<table>
+							<tr>
+								<td>
+									<input type='text' name='attr_repname'>
+								</td>
+								<td class='red nowidth'>
+									-3
+								</td>
+								<td class='red'>								
+									<input type='checkbox' name='attr_repn31'>
+									<input type='checkbox' name='attr_repn32'>
+									<input type='checkbox' name='attr_repn33'>
+								</td>
+								<td class='red'>
+									-2
+								</td>
+								<td class='red'>								
+									<input type='checkbox' name='attr_repn21'>
+									<input type='checkbox' name='attr_repn22'>
+									<input type='checkbox' name='attr_repn23'>
+								</td>			
+								<td class='red'>
+									-1
+								</td>
+								<td class='black'>
+									<input type='checkbox' name='attr_repn11'>
+									<input type='checkbox' name='attr_repn12'>
+									<input type='checkbox' name='attr_repn13'>
+								</td>			
+								<td>
+									0
+								</td>
+								<td class='black'>
+									<input type='checkbox' name='attr_repp11'>
+									<input type='checkbox' name='attr_repp12'>
+									<input type='checkbox' name='attr_repp13'>
+									<input type='checkbox' name='attr_repp14'>
+									<input type='checkbox' name='attr_repp15'>			
+								</td>
+								<td class='green'>								
+									+1
+								</td>			
+								<td class='green'>			
+									<input type='checkbox' name='attr_repp21'>
+									<input type='checkbox' name='attr_repp22'>
+									<input type='checkbox' name='attr_repp23'>
+									<input type='checkbox' name='attr_repp24'>
+									<input type='checkbox' name='attr_repp25'>			
+								</td>
+								<td class='green'>								
+									+2
+								</td>						
+								<td class='green'>			
+									<input type='checkbox' name='attr_repp31'>
+									<input type='checkbox' name='attr_repp32'>
+									<input type='checkbox' name='attr_repp33'>
+									<input type='checkbox' name='attr_repp34'>
+									<input type='checkbox' name='attr_repp35'>			
+								</td>
+								<td class='green'>								
+									+3
+								</td>						
+							</tr>
+						</table>
+					</fieldset>
+				</div>
 			</div>
-			<div class='attribute'>
-				<input type='number' name='attr_luck'>
-				<span class='attributename'>Luck</span><span class='attributedefault'>[
-					<span class='adventurer'>0</span>
-				]</span>
-			</div>
-			<div class='attribute'>
-				<input type='number' name='attr_might'>
-				<span class='attributename'>Might</span><span class='attributedefault'>[
-					<span class='adventurer'>-1</span>
-				]</span>
-			</div>
-			<div class='badbox'>
-				<input type='checkbox' name='attr_inj1'>
-				<input type='checkbox' name='attr_inj2'>
-				<input type='checkbox' name='attr_inj3'>
-				<input type='checkbox' name='attr_inj4'>
-				<span class='baddesc'>INJURY</span>
-			</div>
-			<div class='badbox'>
-				<input type='checkbox' name='attr_ex1'>
-				<input type='checkbox' name='attr_ex2'>
-				<input type='checkbox' name='attr_ex3'>
-				<input type='checkbox' name='attr_ex4'>
-				<span class='baddesc'>EXHAUSTION</span>
-			</div>
-			<div class='badbox'>
-				<input type='checkbox' name='attr_dep1'>
-				<input type='checkbox' name='attr_dep2'>
-				<input type='checkbox' name='attr_dep3'>
-				<input type='checkbox' name='attr_dep4'>
-				<span class='baddesc'>DEPLETION</span>
-			</div>
-			<div class='headtext'>Roguish Feats</div>
-			<table>
-				<tr>
-					<td><input type='checkbox' name='attr_rogue1'> Acrobatics</td>
-					<td><input type='checkbox' name='attr_rogue6'> Pick pocket</td>
-				</tr>
-				<tr>
-					<td><input type='checkbox' name='attr_rogue2'> Blindside</td>
-					<td><input type='checkbox' name='attr_rogue7'> Sneak</td>
-				</tr>
-				<tr>
-					<td><input type='checkbox' name='attr_rogue3'> Counterfeit</td>
-					<td><input type='checkbox' name='attr_rogue8'> Pick Lock</td>
-				</tr>
-				<tr>
-					<td><input type='checkbox' name='attr_rogue4'> Disable Device</td>
-					<td><input type='checkbox' name='attr_rogue9'> Sleight of Hand</td>
-				</tr>
-				<tr>
-					<td><input type='checkbox' name='attr_rogue5'> Hide</td>
-					<td></td>
-				</tr>
-			</table>
-			<div class='headtext'>Weapon Skills</div>
-			<table>
-				<tr>
-					<td><input type='checkbox' name='attr_weapon1'> Cleave</td>
-					<td><input type='checkbox' name='attr_weapon6'> Parry</td>
-				</tr>
-				<tr>
-					<td><input type='checkbox' name='attr_weapon2'> Confuse Senses</td>
-					<td><input type='checkbox' name='attr_weapon7'> Quick Shot</td>
-				</tr>
-				<tr>
-					<td><input type='checkbox' name='attr_weapon3'> Disarm</td>
-					<td><input type='checkbox' name='attr_weapon8'> Storm a Group</td>
-				</tr>
-				<tr>
-					<td><input type='checkbox' name='attr_weapon4'> Harry</td>
-					<td><input type='checkbox' name='attr_weapon9'> Trick Shot</td>
-				</tr>
-				<tr>
+		</div>
+		<div class='page2'>
+			<div class='onetworow'>
+				<div class='col1'>
+					<div class='attribute'>
+						<input type='number' name='attr_charm' value="0">
+						<span class='connections'>Charm</span><span class='attributedefault'>[
+							<span class='scoundrel arbiter'>+1</span>
+							<span class='thief ronin harrier'>0</span>
+							<span class='tinker ranger'>-1</span>
+							<span class='vagrant adventurer'>+2</span>							
+						]</span>
+					</div>
+					<div class='attribute'>
+						<input type='number' name='attr_cunning' value="0">
+						<span class='connections'>Cunning</span><span class='attributedefault'>[
+							<span class='scoundrel harrier'>-1</span>
+							<span class='thief arbiter'>0</span>
+							<span class='tinker'>+2</span>
+							<span class='ranger ronin vagrant adventurer'>+1</span>							
+						]</span>
+					</div>
+					<div class='attribute'>
+						<input type='number' name='attr_finesse' value="0">
+						<span class='connections'>Finesse</span><span class='attributedefault'>[
+							<span class='ronin adventurer scoundrel arbiter'>0</span>
+							<span class='thief harrier'>+2</span>
+							<span class='tinker ranger'>+1</span>
+							<span class='vagrant'>-1</span>							
+						]</span>
+					</div>
+					<div class='attribute'>
+						<input type='number' name='attr_luck' value="0">
+						<span class='connections'>Luck</span><span class='attributedefault'>[
+							<span class='scoundrel'>+2</span>
+							<span class='thief harrier'>+1</span>
+							<span class='tinker vagrant ranger adventurer'>0</span>
+							<span class='ronin arbiter'>-1</span>							
+						]</span>
+					</div>
+					<div class='attribute'>
+						<input type='number' name='attr_might' value="0">
+						<div class='connections inline'>Might</div>
+						<span class='attributedefault'>[
+							<span class='ronin arbiter'>+2</span>						
+							<span class='adventurer thief'>-1</span>
+							<span class='ranger'>+1</span>
+							<span class='tinker vagrant scoundrel harrier'>0</span>
+						]</span>
+					</div>
+					<div class='bbsuper'>
+						<div class='bbsurround'>
+							<div class='badbox'>
+								<input type='checkbox' name='attr_inj1'>
+								<input type='checkbox' name='attr_inj2'>
+								<input type='checkbox' name='attr_inj3'>
+								<input type='checkbox' name='attr_inj4'>
+								<input type='hidden' name='attr_move3' value="" class='arbitermove'>
+								<input type='checkbox' name='attr_inj5' class='arbiter'>
+								<span class='baddesc'>INJURY</span>
+							</div>
+							<div class='badbox'>
+								<input type='checkbox' name='attr_ex1'>
+								<input type='checkbox' name='attr_ex2'>
+								<input type='checkbox' name='attr_ex3'>
+								<input type='checkbox' name='attr_ex4'>
+								<input type='hidden' name='attr_move1' value="" class='harriermove'>
+								<input type='checkbox' name='attr_ex5' class='harrier'>
+								<span class='baddesc'>EXHAUSTION</span>
+							</div>
+							<div class='badbox'>
+								<input type='checkbox' name='attr_dep1'>
+								<input type='checkbox' name='attr_dep2'>
+								<input type='checkbox' name='attr_dep3'>
+								<input type='checkbox' name='attr_dep4'>
+								<span class='baddesc'>DEPLETION</span>
+							</div>
+						</div>
+					</div>
+					<div class='headtext'>Roguish Feats</div>
+					<table>
+						<tr>
+							<td><input type='checkbox' name='attr_rogue1'> Acrobatics</td>
+							<td><input type='checkbox' name='attr_rogue6'> Pick pocket</td>
+						</tr>
+						<tr>
+							<td><input type='checkbox' name='attr_rogue2'> Blindside</td>
+							<td><input type='checkbox' name='attr_rogue7'> Sneak</td>
+						</tr>
+						<tr>
+							<td><input type='checkbox' name='attr_rogue3'> Counterfeit</td>
+							<td><input type='checkbox' name='attr_rogue8'> Pick Lock</td>
+						</tr>
+						<tr>
+							<td><input type='checkbox' name='attr_rogue4'> Disable Device</td>
+							<td><input type='checkbox' name='attr_rogue9'> Sleight of Hand</td>
+						</tr>
+						<tr>
+							<td><input type='checkbox' name='attr_rogue5'> Hide</td>
+							<td></td>
+						</tr>
+					</table>
+					<div class='martop headtext'>Weapon Skills</div>
+					<table>
+						<tr>
+							<td><input type='checkbox' name='attr_weapon1'> Cleave</td>
+							<td><input type='checkbox' name='attr_weapon6'> Parry</td>
+						</tr>
+						<tr>
+							<td><input type='checkbox' name='attr_weapon2'> Confuse Senses</td>
+							<td><input type='checkbox' name='attr_weapon7'> Quick Shot</td>
+						</tr>
+						<tr>
+							<td><input type='checkbox' name='attr_weapon3'> Disarm</td>
+							<td><input type='checkbox' name='attr_weapon8'> Storm a Group</td>
+						</tr>
+						<tr>
+							<td><input type='checkbox' name='attr_weapon4'> Harry</td>
+							<td><input type='checkbox' name='attr_weapon9'> Trick Shot</td>
+						</tr>
+					<tr>
 					<td><input type='checkbox' name='attr_weapon5'> Improvise</td>
 					<td><input type='checkbox' name='attr_weapon10'> Vicious Strike</td>
-				</tr>
-			</table>			
-		</div>
-		<div class='col'>
-			<div class='headtext'>Your Moves</div>
-			<div>
-				<input type='checkbox' name='move1'>
-				<span class='movename'>
-					<span class='adventurer'>Toolbox</span>
-				</span>
-			</div>
-			<div class='movedesc'>
-				<span class='adventurer'>
-					You have a kit of tools and supplies with which you work on long-term projects. Choose two features:
-					assorted scrap wood, assorted gears and springs, esoteric hand tools, manuals, assorted medicines, portable alchemy kit, sewing kit, cookware, minor explosives
-					Choose one drawback: heavy (counts as 2 Load instead of 1), bulky & obvious, stolen, fragile
-					When you open up your toolkit and dedicate yourself to making a thing or to getting to the bottom of something, decide what and tell the GM. The GM will give you between 1 to 4 conditions you must fulfill to accomplish your goal, including time taken, materials needed, help needed, facilities/tools needed, or the limits on the project. 
-					When you accomplish the conditions, you accomplish the goal.
-				</span>
-			</div>	
-			<div>
-				<input type='checkbox' name='move1'>
-				<span class='movename'>
-					<span class='adventurer'>Toolbox</span>
-				</span>
-			</div>
-			<div class='movedesc'>
-				<span class='adventurer'>
-					You have a kit of tools and supplies with which you work on long-term projects. Choose two features:
-					assorted scrap wood, assorted gears and springs, esoteric hand tools, manuals, assorted medicines, portable alchemy kit, sewing kit, cookware, minor explosives
-					Choose one drawback: heavy (counts as 2 Load instead of 1), bulky & obvious, stolen, fragile
-					When you open up your toolkit and dedicate yourself to making a thing or to getting to the bottom of something, decide what and tell the GM. The GM will give you between 1 to 4 conditions you must fulfill to accomplish your goal, including time taken, materials needed, help needed, facilities/tools needed, or the limits on the project. 
-					When you accomplish the conditions, you accomplish the goal.
-				</span>
-			</div>
-			<div>
-				<input type='checkbox' name='move1'>
-				<span class='movename'>
-					<span class='adventurer'>Toolbox</span>
-				</span>
-			</div>
-			<div class='movedesc'>
-				<span class='adventurer'>
-					You have a kit of tools and supplies with which you work on long-term projects. Choose two features:
-					assorted scrap wood, assorted gears and springs, esoteric hand tools, manuals, assorted medicines, portable alchemy kit, sewing kit, cookware, minor explosives
-					Choose one drawback: heavy (counts as 2 Load instead of 1), bulky & obvious, stolen, fragile
-					When you open up your toolkit and dedicate yourself to making a thing or to getting to the bottom of something, decide what and tell the GM. The GM will give you between 1 to 4 conditions you must fulfill to accomplish your goal, including time taken, materials needed, help needed, facilities/tools needed, or the limits on the project. 
-					When you accomplish the conditions, you accomplish the goal.
-				</span>
-			</div>
-			<div>
-				<input type='checkbox' name='move1'>
-				<span class='movename'>
-					<span class='adventurer'>Toolbox</span>
-				</span>
-			</div>
-			<div class='movedesc'>
-				<span class='adventurer'>
-					You have a kit of tools and supplies with which you work on long-term projects. Choose two features:
-					assorted scrap wood, assorted gears and springs, esoteric hand tools, manuals, assorted medicines, portable alchemy kit, sewing kit, cookware, minor explosives
-					Choose one drawback: heavy (counts as 2 Load instead of 1), bulky & obvious, stolen, fragile
-					When you open up your toolkit and dedicate yourself to making a thing or to getting to the bottom of something, decide what and tell the GM. The GM will give you between 1 to 4 conditions you must fulfill to accomplish your goal, including time taken, materials needed, help needed, facilities/tools needed, or the limits on the project. 
-					When you accomplish the conditions, you accomplish the goal.
-				</span>
-			</div>
-			<div>
-				<input type='checkbox' name='move1'>
-				<span class='movename'>
-					<span class='adventurer'>Toolbox</span>
-				</span>
-			</div>
-			<div class='movedesc'>
-				<span class='adventurer'>
-					You have a kit of tools and supplies with which you work on long-term projects. Choose two features:
-					assorted scrap wood, assorted gears and springs, esoteric hand tools, manuals, assorted medicines, portable alchemy kit, sewing kit, cookware, minor explosives
-					Choose one drawback: heavy (counts as 2 Load instead of 1), bulky & obvious, stolen, fragile
-					When you open up your toolkit and dedicate yourself to making a thing or to getting to the bottom of something, decide what and tell the GM. The GM will give you between 1 to 4 conditions you must fulfill to accomplish your goal, including time taken, materials needed, help needed, facilities/tools needed, or the limits on the project. 
-					When you accomplish the conditions, you accomplish the goal.
-				</span>
-			</div>
-			<div>
-				<input type='checkbox' name='move1'>
-				<span class='movename'>
-					<span class='adventurer'>Toolbox</span>
-				</span>
-			</div>
-			<div class='movedesc'>
-				<span class='adventurer'>
-					You have a kit of tools and supplies with which you work on long-term projects. Choose two features:
-					assorted scrap wood, assorted gears and springs, esoteric hand tools, manuals, assorted medicines, portable alchemy kit, sewing kit, cookware, minor explosives
-					Choose one drawback: heavy (counts as 2 Load instead of 1), bulky & obvious, stolen, fragile
-					When you open up your toolkit and dedicate yourself to making a thing or to getting to the bottom of something, decide what and tell the GM. The GM will give you between 1 to 4 conditions you must fulfill to accomplish your goal, including time taken, materials needed, help needed, facilities/tools needed, or the limits on the project. 
-					When you accomplish the conditions, you accomplish the goal.
-				</span>
-			</div>
-		</div>
-	</div>
-	<div class='equipbox'>
-		<div class='equipheader'>
-		</div>
-	</div>
-</div>
-<div class="selectclass">
-	I am a...<select name="attr_class">
-		<option value="">Select Class</option>
-		<option value="adventurer">Adventurer</option>
-		<option value="arbiter">Arbiter</option>
-	<option value="harrier">Harrier</option>
-	<option value="ranger">Ranger</option>
-	<option value="ronin">Ronin</option>
-	<option value="scoundrel">Scoundrel</option>
-	<option value="thief">Thief</option>
-	<option value="tinker">Tinker</option>
-	<option value="vagrant">Vagrant</option>
-	</select>
-</div>
+					</tr>
+					</table>			
+					</div>
+					<div class='col2'>
+					<div class='connections'>Your Moves</div>
+					<div>
+					<input type='checkbox' name='attr_move1' class='inline'>
+					<label class='adventurer inline drivelabel'>Sterling Reputation</label>
+					<label class='arbiter inline drivelabel'>Brute</label>
+					<label class='harrier inline drivelabel'></label>
+					<label class='ranger inline drivelabel'></label>
+					<label class='ronin inline drivelabel'></label>
+					<label class='scoundrel inline drivelabel'></label>
+					<label class='thief inline drivelabel'></label>
+					<label class='tinker inline drivelabel'></label>
+					<label class='vagrant inline drivelabel'></label>
+					</div>
+					<div class='movedesc'>
+					<span class='adventurer'>Whenever you <strong>mark any amount of prestige with a faction</strong>, mark one additional prestige. When you <strong>mark any amount of notoriety with a faction</strong>, you can instead clear an equivalent amount of marked prestige.</span>
+					<span class='arbiter'>Take +1 Might (max +3).</span>
+					<span class='harrier'></span>
+					<span class='ranger'></span>
+					<span class='ronin'></span>
+					<span class='scoundrel'></span>
+					<span class='thief'></span>
+					<span class='tinker'></span>
+					<span class='vagrant'></span>						
+					</div>	
+					<div>
+					<input type='checkbox' name='attr_move2'>
+					<label class='adventurer inline drivelabel'>Subduing Strikes</label>
+					<label class='arbiter inline drivelabel'>Carry a Big Stick</label>
+					<label class='harrier inline drivelabel'></label>
+					<label class='ranger inline drivelabel'></label>
+					<label class='ronin inline drivelabel'></label>
+					<label class='scoundrel inline drivelabel'></label>
+					<label class='thief inline drivelabel'></label>
+					<label class='tinker inline drivelabel'></label>
+					<label class='vagrant inline drivelabel'></label>				
+					</div>
+					<div class='movedesc'>
+					<span class='adventurer'>When you aim to <strong>subdue an enemy quickly and nonlethally</strong>, you can <strong>engage in melee</strong> with Cunning instead of Might. You cannot choose to inflict serious harm if you do.</span>
+					<span class='arbiter'>When you <strong>use words to pause an argument or violent conflict between others</strong>, roll with Charm. On a hit, they choose: mark 2 exhaustion and  keep going, or stop for now. On a 10+, take +1 ongoing to dealing with them peacefully. On a miss, NPCs turn their anger to you, and PCs take +1 ongoing against you for the scene.</span>
+					<span class='harrier'></span>
+					<span class='ranger'></span>
+					<span class='ronin'></span>
+					<span class='scoundrel'></span>
+					<span class='thief'></span>
+					<span class='tinker'></span>
+					<span class='vagrant'></span>						
+					</div>
+					<div>
+					<input type='checkbox' name='attr_move3'>
+					<label class='adventurer inline drivelabel'>Talon on the Pulse</label>
+					<label class='arbiter inline drivelabel'>Crash & Smash</label>
+					<label class='harrier inline drivelabel'></label>
+					<label class='ranger inline drivelabel'></label>
+					<label class='ronin inline drivelabel'></label>
+					<label class='scoundrel inline drivelabel'></label>
+					<label class='thief inline drivelabel'></label>
+					<label class='tinker inline drivelabel'></label>
+					<label class='vagrant inline drivelabel'></label>
+					</div>
+					<div class='movedesc'>
+					<span class='adventurer'>
+					When you <strong>gather information about the goings-on in a clearing</strong>, roll with Cunning. On a 10+, ask 3. On a 7-9, ask 2.
+					<ul>
+					<li>Who holds power in this clearing?</li>
+					<li>Who is the local dissident?</li>
+					<li>What are the denizens afraid of?</li>
+					<li>What do the denizens hope for?</li>
+					<li>What opportunities exist for enterprising vagabonds?</li>
+					</ul>
+					On a miss, your questions tip off someone dangerous.
+					</span>
+					<span class='arbiter'></span>
+					<span class='harrier'></span>
+					<span class='ranger'></span>
+					<span class='ronin'></span>
+					<span class='scoundrel'></span>
+					<span class='thief'></span>
+					<span class='tinker'></span>
+					<span class='vagrant'></span>						
+					</div>
+					<div>
+					<input type='checkbox' name='attr_move4'>
+					<label class='adventurer inline drivelabel'>Orator</label>
+					<label class='arbiter inline drivelabel'>Hardy</label>
+					<label class='harrier inline drivelabel'></label>
+					<label class='ranger inline drivelabel'></label>
+					<label class='ronin inline drivelabel'></label>
+					<label class='scoundrel inline drivelabel'></label>
+					<label class='thief inline drivelabel'></label>
+					<label class='tinker inline drivelabel'></label>
+					<label class='vagrant inline drivelabel'></label>
+					</div>
+					<div class='movedesc'>
+					<span class='adventurer'>
+					When you <strong>give a speech to interested denizens of a clearing</strong>, say what you are motivating them to do and roll with Charm. On a hit, they will move to do it as they see fit. On a 10+, choose 2. On a 7-9, choose 1.
+					<ul>
+					<li>They don’t try to take your intent too far</li>
+					<li>They don’t disband at the first sign of real resistance</li>
+					<li>They don’t demand you stand at their head and lead</li>
+					</ul>
+					On a miss, they twist your message in unpredictable ways.
+					</span>
+					<span class='arbiter'></span>
+					<span class='harrier'></span>
+					<span class='ranger'></span>
+					<span class='ronin'></span>
+					<span class='scoundrel'></span>
+					<span class='thief'></span>
+					<span class='tinker'></span>
+					<span class='vagrant'></span>						
+					</div>
+					<div>
+					<input type='checkbox' name='attr_move5'>
+					<label class='adventurer inline drivelabel'>Well-Read</label>
+					<label class='arbiter inline drivelabel'>Strong Draw</label>
+					<label class='harrier inline drivelabel'></label>
+					<label class='ranger inline drivelabel'></label>
+					<label class='ronin inline drivelabel'></label>
+					<label class='scoundrel inline drivelabel'></label>
+					<label class='thief inline drivelabel'></label>
+					<label class='tinker inline drivelabel'></label>
+					<label class='vagrant inline drivelabel'></label>
+					</div>
+					<div class='movedesc'>
+					<span class='adventurer'>Take +1 Cunning (max +3).</span>
+					<span class='adventurer'></span>
+					<span class='arbiter'></span>
+					<span class='harrier'></span>
+					<span class='ranger'></span>
+					<span class='ronin'></span>
+					<span class='scoundrel'></span>
+					<span class='thief'></span>
+					<span class='tinker'></span>
+					<span class='vagrant'></span>						
+					</div>
+					<div>
+					<input type='checkbox' name='attr_move6'>
+					<label class='adventurer inline drivelabel'>Fast Friends</label>
+					<label class='arbiter inline drivelabel'>Guardian</label>
+					<label class='harrier inline drivelabel'></label>
+					<label class='ranger inline drivelabel'></label>
+					<label class='ronin inline drivelabel'></label>
+					<label class='scoundrel inline drivelabel'></label>
+					<label class='thief inline drivelabel'></label>
+					<label class='tinker inline drivelabel'></label>
+					<label class='vagrant inline drivelabel'></label>
+					</div>
+					<div class='movedesc'>
+					<span class='adventurer'>When you <strong>try to befriend an NPC you’ve just met by matching their personality, body language, and desires</strong>, mark exhaustion and roll with Cunning. On a hit, they’ll look upon you favorably—ask them any one noncompromising question and they’ll answer truthfully, or request a simple favor and they’ll do it for you. On a 10+, they really like you—they’ll share a valuable secret or grant you a serious favor instead. On a miss, you read them totally wrong, and their displeasure costs you.</span>
+					<span class='adventurer'></span>
+					<span class='arbiter'></span>
+					<span class='harrier'></span>
+					<span class='ranger'></span>
+					<span class='ronin'></span>
+					<span class='scoundrel'></span>
+					<span class='thief'></span>
+					<span class='tinker'></span>
+					<span class='vagrant'></span>						
+					</div>
+					</div>
+					</div>
+					<div class='equipbox'>
+					<div class='equipheader'>
+					<span class='headtext'>Equipment</span><span class=' attributedefault yellowcap'>STARTING VALUE: 9 | CARRYING: <input type='number' value="0" name='attr_equipcarry'> | BURDENED (4+Might): <span name='attr_burdened'></span> | MAX (TWICE BURDENED): <span name='attr_maxcarry'></span>
+					</div>
+					<textarea name='attr_equip'>
+					</textarea>
+					</div>
+					</div>
+					<div class="selectclass">
+					I am a(n)...<select name="attr_class">
+					<option value="">Select Class</option>
+					<option value="adventurer">Adventurer</option>
+					<option value="arbiter">Arbiter</option>
+					<option value="harrier">Harrier</option>
+					<option value="ranger">Ranger</option>
+					<option value="ronin">Ronin</option>
+					<option value="scoundrel">Scoundrel</option>
+					<option value="thief">Thief</option>
+					<option value="tinker">Tinker</option>
+					<option value="vagrant">Vagrant</option>
+					</select>
+					</div>
+					</div>
+					</div>
+					
+					<script type='text/worker'>
+					on("change:might", function(eventInfo) {
+					setAttrs({burdened: 4+parseInt(eventInfo.newValue), maxcarry: (4+parseInt(eventInfo.newValue))*2});
+					});
+					</script>														

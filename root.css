@@ -1,0 +1,319 @@
+@import url('https://fonts.googleapis.com/css?family=EB+Garamond&family=Libre+Baskerville&display=swap');
+@font-face {
+    font-family: 'Luminari';
+    src: url("https://shadowrequiem.space/fonts/Luminari.ttf") format("truetype");
+    font-weight: normal;
+    font-style: normal;
+}
+.fullwidth {
+	width: 100%;
+}
+
+.page {
+	background-color: AntiqueWhite;
+	padding: 3px;
+	font-family: "EB Garamond";	
+}
+.border {
+	background-image: repeating-linear-gradient(0deg, #99925d, #99925d 0px, transparent 10px, transparent 10px, #99925d 20px), repeating-linear-gradient(90deg, #99925d, #99925d 0px, transparent 10px, transparent 10px, #99925d 20px), repeating-linear-gradient(180deg, #99925d, #99925d 0px, transparent 10px, transparent 10px, #99925d 20px), repeating-linear-gradient(270deg, #99925d, #99925d 0px, transparent 10px, transparent 10px, #99925d 20px);
+	background-size: 3px 100%, 100% 3px, 3px 100% , 100% 3px;
+	background-position: 0 0, 0 0, 100% 0, 0 100%;
+	background-repeat: no-repeat;
+	padding: 5px;
+}
+.header {
+	display: flex;
+}
+.inline {
+	display: inline !important;
+}
+.classdesc {
+	flex: 1;
+	margin-left: 15px;
+	position: relative;
+}
+.classdesc,
+.classname {
+	display: inline;
+}
+
+.classname span {
+	font-family: 'Luminari';
+	font-size: 64px;
+	font-weight: bold;
+	-webkit-text-fill-color: #3B4D47;
+	-webkit-text-stroke-width: 0.1px;
+	-webkit-text-stroke-color: black;	
+}
+
+.classdesc span {
+	position: absolute;
+	bottom: 5px;
+}
+
+label {
+	margin-top: 5px !important;
+	margin-bottom: 2px !important;
+	font-family: 'Luminari';
+	font-weight: bold;
+	color: #726A50;
+	font-size: large;
+	padding-left: 3px;
+}
+
+input {
+	font-family: "EB Garamond";
+}
+
+select {
+	background-color: #e0d7b6;
+}
+
+input[type='text'] {
+	background-color: transparent;
+	border-top: none;
+	border-left: none;
+	border-right: none;
+	border-bottom: 1px solid black;
+}
+
+.page input::-webkit-outer-spin-button,
+.page input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type='number'] {
+	font-size: larger;
+    height: 2.5em !important;
+    width: 2.5em !important;
+    border-radius: 1.5em !important;
+	-moz-appearance: textfield;
+	text-align: center;
+}
+
+.classdesc {
+	font-family: "EB Garamond";
+	font-style: italic;
+}
+
+.backgroundbox {
+	background-color: #D3C9A8;
+	padding: 5px;
+}
+
+.backgroundbox .bold {
+	font-weight: bold;
+	display: block;
+}
+.break {
+	display: inline-block;
+}
+.drivelabel {
+	display: inline;
+	font-size: large !important;
+}
+.attributedefault,
+.yellowcap {
+	font-family: "Libre Baskerville";
+	font-size: small-caps;
+	text-transform: uppercase;
+	color: #99925D;
+}
+.specbox {
+	background-image: url("https://shadowrequiem.space/fonts/root.png");
+	padding: 5px;	
+}
+.whitebox {
+	border: 2px solid white;
+	padding: 2px;
+	color: white;
+	font-family: "Luminari";
+	font-size: x-large;	
+}
+.whitebox span {
+	font-family: "Luminari";
+}
+.headtext,
+.connections {
+	font-family: "Luminari";
+	font-size: x-large;
+	font-weight: bold;
+	-webkit-text-fill-color: #3B4D47;
+	-webkit-text-stroke-width: 0.1px;
+	-webkit-text-stroke-color: black;	
+}
+.connectiontitle {
+	margin-top: 5px !important;
+	margin-bottom: 2px !important;
+	font-family: 'Luminari';
+	font-weight: bold;	
+	font-size: large;
+	padding-left: 3px;
+}
+.drivetext {
+	font-weight: bold;
+	margin-bottom: 10px;
+}
+
+.reputation {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  font-family: 
+}
+
+.reputation::before,
+.reputation::after {
+  content: '';
+  flex: 1;
+  border-bottom: 4px dotted #99925D;
+}
+
+.reputation:not(:empty)::before {
+  margin-right: .25em;
+}
+
+.reputation:not(:empty)::after {
+  margin-left: .25em;
+}
+
+div[data-groupname="repeating_reputation"] input[type="checkbox"] {
+	height: 17px;
+	width: 17px;
+}
+
+div[data-groupname="repeating_reputation"] td {
+	font-weight: bold;
+	padding-left:2px;
+	padding-right: 2px;
+}
+
+.black input {
+	-webkit-box-shadow: inset 0px 0px 0px 1px black;
+    -moz-box-shadow: inset 0px 0px 0px 1px black;
+    box-shadow: inset 0px 0px 0px 1px black;	
+}
+.red {
+	color: red;
+}
+.red input {
+	-webkit-box-shadow: inset 0px 0px 0px 1px rgb(255 0 0);
+    -moz-box-shadow: inset 0px 0px 0px 1px rgba(255,0,0,1);
+    box-shadow: inset 0px 0px 0px 1px rgb(255 0 0);	
+}
+.green {
+	color: green;
+}
+.green input {
+	-webkit-box-shadow: inset 0px 0px 0px 1px green;
+    -moz-box-shadow: inset 0px 0px 0px 1px green;
+    box-shadow: inset 0px 0px 0px 1px green;	
+}
+
+.attributedefault {
+	margin-left: 5px;
+}
+
+.attribute {
+	margin-bottom: 10px;
+}
+.attribute .connections {
+	padding-top: 0.5em;
+}
+
+.bbsuper {
+	background-color: #e0d7b6;
+	padding: 2px;
+	margin-bottom: 5px;
+}
+
+.bbsurround {
+	border: 2px dashed lightyellow;
+	padding: 2px;
+	color: white;
+	font-family: "Luminari";	
+}
+
+.badbox input {
+	width: 17px !important;
+	height: 17px !important;
+}
+
+.badbox span {
+	font-family: "Libre Baskerville";
+	font-size: small-caps;
+	text-transform: uppercase;
+	font-weight: bold;
+	font-size: 1.1em;
+	color: rgb(91,82,53);	
+}
+
+.martop {
+	margin-top: 5px;
+}
+
+.equipbox {
+	background-color: rgb(252,251,246);
+	border: 4px double rgb(153,146,93);
+	padding: 3px;
+}
+
+.equipbox textarea {
+	width: 99%;
+	background-color: transparent;
+}
+
+.curpage[value="1"] ~ .page2,
+.curpage[value="2"] ~ .page1,
+.character_class:not([value="adventurer"]) ~ .page .adventurer,
+.character_class:not([value="arbiter"]) ~ .page .arbiter,
+.character_class:not([value="harrier"]) ~ .page .harrier,
+.character_class:not([value="ranger"]) ~ .page .ranger,
+.character_class:not([value="ronin"]) ~ .page .ronin,
+.character_class:not([value="scoundrel"]) ~ .page .scoundrel,
+.character_class:not([value="thief"]) ~ .page .thief,
+.character_class:not([value="tinker"]) ~ .page .tinker,
+.character_class:not([value="vagrant"]) ~ .page .vagrant,
+.character_class:not([value="none"]) ~ .page .selectclass,
+.character_class[value="none"] ~ .pagetoggle, 
+.character_class[value="none"] ~ .page .page1,
+.character_class[value="none"] ~ .page .page2,
+.harriermove[value=""] + input {
+	display: none !important;
+}
+.pagetoggle input {
+	display: none;
+}
+.pagetoggle label {
+	background-color: #e0d7b6;	
+	display: inline;
+	border-left: 1px solid rgb(153,146,93);
+	border-right: 1px solid rgb(153,146,93);
+	border-top: 1px solid rgb(153,146,93);
+	margin-left: 10px; 
+}
+.curpage[value="1"] ~ label[for="page1"],
+.curpage[value="2"] ~ label[for="page2"]{
+	background-color: AntiqueWhite;
+}
+
+.p1row {
+	display: grid;
+	grid-template-areas: "col1 col2 col3";
+	grid-template-columns: 33% 33% 33%;
+	grid-gap: 5px;	
+}
+.p1row .col1 { grid-area: col1; }
+.p1row .col2 { grid-area: col2; }
+.p1row .col3 { grid-area: col3; }
+
+.onetworow {
+	display: grid;
+	grid-template-areas: "col4 col5";
+	grid-template-columns: 33% 66%;
+	grid-gap: 5px;
+}
+
+.onetworow .col1 { grid-area: col4; }
+.onetworow .col2 { grid-area: col5; }
