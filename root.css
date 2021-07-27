@@ -27,6 +27,12 @@
 .inline {
 	display: inline !important;
 }
+.charactersheet table {
+	margin-left: 2px;
+}
+td {
+	padding-left: 2px;
+}
 .classdesc {
 	flex: 1;
 	margin-left: 15px;
@@ -105,6 +111,9 @@ input[type='number'] {
 .backgroundbox .bold {
 	font-weight: bold;
 	display: block;
+}
+.backgroundbox input[type='text'] {
+	width: 32ch;
 }
 .break {
 	display: inline-block;
@@ -257,6 +266,7 @@ div[data-groupname="repeating_reputation"] td {
 	background-color: rgb(252,251,246);
 	border: 4px double rgb(153,146,93);
 	padding: 3px;
+	margin-top: 5px;
 }
 
 .equipbox textarea {
@@ -264,8 +274,81 @@ div[data-groupname="repeating_reputation"] td {
 	background-color: transparent;
 }
 
+.dotteddesc {
+	font-style: italic;
+	border-left: 3px dotted black;
+	padding-left: 2px;
+	font-size: small;
+	margin-top: 4px;
+}
+
+.movedesc {
+	margin-bottom: 3px;
+}	
+
 .curpage[value="1"] ~ .page2,
 .curpage[value="2"] ~ .page1,
+.addcon[value="none"] ~ input,
+.advmove:not([value="sterling"]) ~ .sterling,
+.advmove:not([value="subdue"]) ~ .subdue,
+.advmove:not([value="talon"]) ~ .talon,
+.advmove:not([value="orator"]) ~ .orator,
+.advmove:not([value="read"]) ~ .read,
+.advmove:not([value="friends"]) ~ .friends,
+.advmove:not([value="brute"]) ~ .brute,
+.advmove:not([value="bigstick"]) ~ .bigstick,
+.advmove:not([value="crash"]) ~ .crash,
+.advmove:not([value="hardy"]) ~ .hardy,
+.advmove:not([value="draw"]) ~ .draw,
+.advmove:not([value="guardian"]) ~ .guardian,
+.advmove:not([value="cc"]) ~ .cc,
+.advmove:not([value="fleet"]) ~ .fleet,
+.advmove:not([value="messenger"]) ~ .messenger,
+.advmove:not([value="parkour"]) ~ .parkour,
+.advmove:not([value="travel"]) ~ .travel,
+.advmove:not([value="smuggle"]) ~ .smuggle,
+.advmove:not([value="silent"]) ~ .silent,
+.advmove:not([value="slip"]) ~ .slip,
+.advmove:not([value="poison"]) ~ .poison,
+.advmove:not([value="forage"]) ~ .forage,
+.advmove:not([value="threat"]) ~ .threat,
+.advmove:not([value="fighter"]) ~ .fighter,
+.advmove:not([value="armed"]) ~ .armed,
+.advmove:not([value="lordwill"]) ~ .lordwill,
+.advmove:not([value="mannered"]) ~ .mannered,
+.advmove:not([value="fealty"]) ~ .fealty,
+.advmove:not([value="rules"]) ~ .rules,
+.advmove:not([value="watching"]) ~ .watching,
+.advmove:not([value="arson"]) ~ .arson,
+.advmove:not([value="createdestroy"]) ~ .createdestroy,
+.advmove:not([value="distraction"]) ~ .distraction,
+.advmove:not([value="dd"]) ~ .dd,
+.advmove:not([value="danger"]) ~ .danger,
+.advmove:not([value="lucky"]) ~ .lucky,
+.advmove:not([value="bande"]) ~ .bande,
+.advmove:not([value="disappear"]) ~ .disappear,
+.advmove:not([value="rope"]) ~ .rope,
+.advmove:not([value="smallhand"]) ~ .smallhand,
+.advmove:not([value="thief"]) ~ .thief,
+.advmove:not([value="goldnose"]) ~ .goldnose,
+.advmove:not([value="toolbox"]) ~ .toolbox,
+.advmove:not([value="repair"]) ~ .repair,
+.advmove:not([value="pockets"]) ~ .pockets,
+.advmove:not([value="jury"]) ~ .jury,
+.advmove:not([value="mind"]) ~ .mind,
+.advmove:not([value="dismantle"]) ~ .dismantle,
+.advmove:not([value="instigate"]) ~ .instigate,
+.advmove:not([value="facade"]) ~ .facade,
+.advmove:not([value="smile"]) ~ .smile,
+.advmove:not([value="charm"]) ~ .charm,
+.advmove:not([value="play"]) ~ .play,
+.advmove:not([value="sand"]) ~ .sand,
+.addcon:not([value="Protector"]) ~ .Protector,
+.addcon:not([value="Partner"]) ~ .Partner,
+.addcon:not([value="Watcher"]) ~ .Watcher,
+.addcon:not([value="Friend"]) ~ .Friend,
+.addcon:not([value="Peer"]) ~ .Peer,
+.addcon:not([value="Family"]) ~ .Family,
 .character_class:not([value="adventurer"]) ~ .page .adventurer,
 .character_class:not([value="arbiter"]) ~ .page .arbiter,
 .character_class:not([value="harrier"]) ~ .page .harrier,
@@ -279,7 +362,11 @@ div[data-groupname="repeating_reputation"] td {
 .character_class[value="none"] ~ .pagetoggle, 
 .character_class[value="none"] ~ .page .page1,
 .character_class[value="none"] ~ .page .page2,
-.harriermove[value=""] + input {
+.harriermove[value="0"] + input,
+.arbitermove[value="0"] + input,
+.tinkermove[value="0"] + input,
+.tinkermove[value="0"] + input + input,
+.advtrack[value="0"] + input {
 	display: none !important;
 }
 .pagetoggle input {
