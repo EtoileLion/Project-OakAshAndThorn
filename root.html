@@ -448,11 +448,7 @@
 							<option value='play'>Let's Play</option>
 							<option value='sand'>Pocket Sand</option>
 						</optgroup>								
-					</select>					
-					<label class="drivelabel">Harm Tracks</label>
-					<input type='checkbox' name="attr_advinj1"><input type='checkbox' name="attr_advinj2"> Injury
-					<input type='checkbox' name="attr_advex1"><input type='checkbox' name="attr_advex2"> Exhaustion
-					<input type='checkbox' name="attr_advdep1"><input type='checkbox' name="attr_advdep2"> Depletion					
+					</select>										
 					<label class="drivelabel">Extra Connections</label>
 					<select name="attr_advcon1">
 						<option value="none">Select a Connection</option>
@@ -835,7 +831,7 @@
 				<div class='col1'>
 					<div class='attribute'>
 						<input type='number' name='attr_charm' value="0">
-						<span class='connections'>Charm</span><span class='attributedefault'>[
+						<button type='roll' class='connections inline nobutton' value="&{template:rootroll} {{charname=@{character_name}}} {{roll=[[2d6+@{charm}]]}} {{attribute=with Charm}}" name="roll_Charm">Charm</button><span class='attributedefault'>[
 							<span class='scoundrel'>+1</span>
 							<span class='arbiter'>+1</span>
 							<span class='thief'>0</span>
@@ -849,7 +845,7 @@
 					</div>
 					<div class='attribute'>
 						<input type='number' name='attr_cunning' value="0">
-						<span class='connections'>Cunning</span><span class='attributedefault'>[
+						<button type='roll' class='connections inline nobutton' value="&{template:rootroll} {{charname=@{character_name}}} {{roll=[[2d6+@{cunning}]]}} {{attribute=with Cunning}}" name="roll_Cunning">Cunning</button><span class='attributedefault'>[
 							<span class='harrier'>-1</span>					
 							<span class='scoundrel'>-1</span>
 							<span class='arbiter'>0</span>
@@ -863,7 +859,7 @@
 					</div>
 					<div class='attribute'>
 						<input type='number' name='attr_finesse' value="0">
-						<span class='connections'>Finesse</span><span class='attributedefault'>[
+						<button type='roll' class='connections inline nobutton' value="&{template:rootroll} {{charname=@{character_name}}} {{roll=[[2d6+@{finesse}]]}} {{attribute=with Finesse}}" name="roll_Finesse">Finesse</button><span class='attributedefault'>[
 							<span class='ronin'>0</span>
 							<span class='adventurer'>0</span>
 							<span class='scoundrel'>0</span>
@@ -877,7 +873,7 @@
 					</div>
 					<div class='attribute'>
 						<input type='number' name='attr_luck' value="0">
-						<span class='connections'>Luck</span><span class='attributedefault'>[
+						<button type='roll' class='connections inline nobutton' value="&{template:rootroll} {{charname=@{character_name}}} {{roll=[[2d6+@{luck}]]}} {{attribute=with Luck}}" name="roll_Luck">Luck</button><span class='attributedefault'>[
 							<span class='scoundrel'>+2</span>
 							<span class='harrier'>+1</span>
 							<span class='thief'>+1</span>
@@ -891,7 +887,7 @@
 					</div>
 					<div class='attribute'>
 						<input type='number' name='attr_might' value="0">
-						<div class='connections inline'>Might</div>
+						<button type='roll' class='connections inline nobutton' value="&{template:rootroll} {{charname=@{character_name}}} {{roll=[[2d6+@{might}]]}} {{attribute=with Might}}" name="roll_Might">Might</button>
 						<span class='attributedefault'>[
 							<span class='arbiter'>+2</span>						
 							<span class='ronin'>+2</span>						
@@ -903,6 +899,9 @@
 							<span class='scoundrel'>0</span>
 							<span class='harrier'>0</span>
 						]</span>
+					</div>
+					<div class='attribute'>
+						<button type='roll' class='connections inline nobuttonicon' value="&{template:rootroll} {{charname=@{character_name}}} {{roll=[[2d6]]}} {{attribute=2d6}}" name="roll_Might">Flat 2d6</button>						
 					</div>
 					<div class='bbsuper'>
 						<div class='bbsurround'>
@@ -945,7 +944,16 @@
 								<input type='hidden' name='attr_advdep2' value="0" class='advtrack'>
 								<input type='checkbox' name='attr_depa2'>								
 								<span class='baddesc'>DEPLETION</span>
+							</div>							
+							<input type='checkbox' name='attr_trackadv' class="arrow"><span class='yellowcap'>Advancements</span>
+							<input type='hidden' name='attr_trackadv' class="hideadvcheck" value="0">
+							<div class='hideadv'>
+								<label class="drivelabel">Advancement Harm Tracks</label>
+								<input type='checkbox' name="attr_advinj1"><input type='checkbox' name="attr_advinj2"> <span class='yellowcap'>Injury</span><br>
+								<input type='checkbox' name="attr_advex1"><input type='checkbox' name="attr_advex2"> <span class='yellowcap'>Exhaustion</span><br>
+								<input type='checkbox' name="attr_advdep1"><input type='checkbox' name="attr_advdep2"> <span class='yellowcap'>Depletion</span>					
 							</div>
+							
 						</div>
 					</div>
 					<div class='headtext'>Roguish Feats</div>
@@ -1620,9 +1628,28 @@
 			</div>
 		</div>
 	</div>
-	
-	<script type='text/worker'>
-		on("change:might", function(eventInfo) {
-			setAttrs({burdened: 4+parseInt(eventInfo.newValue), maxcarry: (4+parseInt(eventInfo.newValue))*2});
-		});
-	</script>																					
+</div>
+
+<script type='text/worker'>
+	on("change:might", function(eventInfo) {
+		setAttrs({burdened: 4+parseInt(eventInfo.newValue), maxcarry: (4+parseInt(eventInfo.newValue))*2});
+	});
+</script>																					
+<rolltemplate class="sheet-rolltemplate-rootroll">
+	<div class="sheet-rolltemplate-rootrollbox">
+		<div class="sheet-rolltemplate-rootrollborder">
+		<div class="sheet-rolltemplate-namebox">{{charname}}</div>
+		<div class="sheet-rolltemplate-attribute">rolls {{attribute}}</div>
+		<div class="sheet-rolltemplate-roll">{{roll}}</div>
+		{{#rollGreater() roll 9}}
+		<div class="sheet-rolltemplate-crit">Strong Hit</div>
+		{{/rollGreater() roll 9}}
+		{{#rollBetween() roll 7 9}}
+		<div class="sheet-rolltemplate-hit">Weak Hit</div>
+		{{/rollBetween() roll 7 9}}
+		{{#rollLess() roll 7}}
+		<div class="sheet-rolltemplate-miss">Miss</div>
+		{{/rollLess() roll 7}}
+		</div>
+	</div>
+</rolltemplate>			

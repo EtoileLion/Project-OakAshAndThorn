@@ -8,12 +8,13 @@
 .fullwidth {
 	width: 100%;
 }
-
+.sheet-rolltemplate-rootrollbox,
 .page {
 	background-color: AntiqueWhite;
 	padding: 3px;
 	font-family: "EB Garamond";	
 }
+.sheet-rolltemplate-rootrollborder,
 .border {
 	background-image: repeating-linear-gradient(0deg, #99925d, #99925d 0px, transparent 10px, transparent 10px, #99925d 20px), repeating-linear-gradient(90deg, #99925d, #99925d 0px, transparent 10px, transparent 10px, #99925d 20px), repeating-linear-gradient(180deg, #99925d, #99925d 0px, transparent 10px, transparent 10px, #99925d 20px), repeating-linear-gradient(270deg, #99925d, #99925d 0px, transparent 10px, transparent 10px, #99925d 20px);
 	background-size: 3px 100%, 100% 3px, 3px 100% , 100% 3px;
@@ -117,6 +118,83 @@ input[type='number'] {
 }
 .break {
 	display: inline-block;
+}
+.sheet-rolltemplate-attribute {
+	text-align: center;
+	font-size: small;
+}
+.sheet-rolltemplate-namebox {
+	font-size: large;
+	font-family: Luminari;
+	color: #726A50;
+	text-align: center;
+}
+.sheet-rolltemplate-result {
+	font-size: x-large;
+	text-align: center;
+	height: 1ch;
+}
+.sheet-rolltemplate-roll {
+	padding-top: 10px;
+	font-size: large;
+	text-align: center;	
+}
+.sheet-rolltemplate-crit {
+	font-size: large;
+	font-weight: bold;	
+	display: block;
+	text-align: center;
+	padding: 1ch;
+	margin: 10px;
+	background-image: url("https://shadowrequiem.space/fonts/root.png");
+	background-size: 30px;
+	color: goldenrod;
+   text-shadow:
+       3px 3px 0 #000,
+     -1px -1px 0 #000,  
+      1px -1px 0 #000,
+      -1px 1px 0 #000,
+       1px 1px 0 #000;
+}
+.sheet-rolltemplate-hit {
+	font-size: large;	
+	font-weight: bold;	
+	display: block;	
+	text-align: center;	
+	padding: 1ch;
+	margin: 10px;	
+	background-image: url("https://shadowrequiem.space/fonts/root.png");
+	background-size: 30px;	
+	color: white;
+   text-shadow:
+       3px 3px 0 #000,
+     -1px -1px 0 #000,  
+      1px -1px 0 #000,
+      -1px 1px 0 #000,
+       1px 1px 0 #000;
+}
+.sheet-rolltemplate-miss {
+	font-size: large;
+	font-weight: bold;
+	display: block;	
+	text-align: center;	
+	padding: 1ch;
+	margin: 10px;
+	background-image: url("https://shadowrequiem.space/fonts/bwbg.png");
+	background-size: 30px;	
+	color: red;
+   text-shadow:
+       3px 3px 0 #000,
+     -1px -1px 0 #000,  
+      1px -1px 0 #000,
+      -1px 1px 0 #000,
+       1px 1px 0 #000;
+}
+.sheet-rolltemplate-roll .inlinerollresult {
+	border: none !important;
+	background-color: #d4c69b !important;
+	padding-left: 6px;
+	padding-right: 6px;
 }
 .drivelabel {
 	display: inline;
@@ -362,6 +440,7 @@ div[data-groupname="repeating_reputation"] td {
 .character_class[value="none"] ~ .pagetoggle, 
 .character_class[value="none"] ~ .page .page1,
 .character_class[value="none"] ~ .page .page2,
+.hideadvcheck[value="0"] ~ .hideadv,
 .harriermove[value="0"] + input,
 .arbitermove[value="0"] + input,
 .tinkermove[value="0"] + input,
@@ -404,3 +483,28 @@ div[data-groupname="repeating_reputation"] td {
 
 .onetworow .col1 { grid-area: col4; }
 .onetworow .col2 { grid-area: col5; }
+.arrow {
+	visibility: hidden;
+}
+.arrow:after {
+	visibility: visible;
+	font-family: pictos;
+	content: "&";
+	display:inline-block; 
+	width:14px; 
+	height:8px;
+	transition: content 1s;
+}
+.arrow:checked:after {	
+	content: "_";
+}
+.nobuttonicon,
+.nobutton {
+	background-color: transparent;
+	border: none;
+	background-image: none;
+}
+.nobutton:before {
+	content: "" !important;
+}
+
